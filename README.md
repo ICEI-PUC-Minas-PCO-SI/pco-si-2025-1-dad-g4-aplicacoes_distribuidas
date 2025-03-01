@@ -1,10 +1,11 @@
-# Puro Osso: Sua Loja de Artefatos Antigos
+# Ossos do Ofício: Artefatos Antigos e Curiosidades
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
 `DISCIPLINA: Desenvolvimento de Aplicações Distribuídas`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A Ossos do Ofício é uma plataforma online especializada na venda de artefatos antigos, com uma oferta diversificada que vai desde peças raras e autênticas até réplicas feitas com maestria, ideais para colecionadores e curiosos. Apenas aqui os colecionadores mais dedicados poderão receber os frutos dos Ossos de seu Ofício! 
+A loja oferece artefatos de várias épocas, desde a antiguidade até o período moderno, abrangendo diversas culturas e estilos. Cada item é acompanhado por uma descrição detalhada sobre sua origem, história e, quando necessário, sua autenticidade. Para garantir a confiança dos clientes, a loja adota uma política transparente sobre os artefatos falsificados, oferecendo réplicas de alta qualidade que preservam o charme e a história dos originais.
 
 ## Integrantes
 
