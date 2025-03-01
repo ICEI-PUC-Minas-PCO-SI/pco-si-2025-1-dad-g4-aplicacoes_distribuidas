@@ -66,6 +66,18 @@ Caso deseje atribuir uma imagem a sua persona, utilize o site https://thisperson
 
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
+1. O Dono da Loja – Lucas Almeida
+Lucas Almeida tem 39 anos, é empreendedor e apaixonado por história e antiguidades. Após anos colecionando artefatos raros, decidiu transformar sua paixão em um negócio, criando um e-commerce especializado na venda de itens históricos como fósseis, jarros antigos e decorações de alto padrão. Seu objetivo é tornar a loja uma referência no mercado de relíquias, garantindo autenticidade e exclusividade para seus clientes. Ele busca constantemente formas de melhorar a experiência do usuário no site e otimizar a logística para garantir segurança nas vendas.
+
+2. O Cliente Colecionador – Eduardo Monteiro
+Eduardo Monteiro tem 45 anos, é empresário e historiador amador. Sempre foi fascinado por relíquias e fósseis autênticos, buscando constantemente expandir sua coleção pessoal. Apaixonado por história e arqueologia, ele valoriza peças com autenticidade comprovada e um bom histórico. Está em busca de um e-commerce confiável que ofereça artefatos exclusivos, como ossos de dinossauros e jarros antigos, para agregar valor ao seu acervo.
+
+3. O Funcionário Responsável pelo Catálogo – Mariana Souza
+Mariana Souza tem 32 anos, é gestora de e-commerce e trabalha diretamente na administração dos produtos da loja. Seu papel é cadastrar e atualizar as descrições dos artefatos, garantindo que todas as informações, imagens e certificações estejam corretas. Também auxilia no atendimento ao cliente, tirando dúvidas sobre autenticidade e procedência dos produtos. Mariana precisa de uma plataforma simples e intuitiva para gerenciar o catálogo com eficiência e garantir uma boa experiência para os compradores.
+
+4. O Decorador de Luxo – Camila Rios
+Camila Rios tem 38 anos, é arquiteta e designer de interiores especializada em decoração de alto padrão. Seus clientes buscam peças exclusivas e sofisticadas, e ela sempre está à procura de elementos autênticos para compor seus projetos. Camila valoriza detalhes históricos e a estética refinada dos artefatos antigos, utilizando-os para criar ambientes únicos e sofisticados. Ela precisa de um site que ofereça imagens de alta qualidade e descrições detalhadas, além de um atendimento personalizado para encontrar peças que atendam às necessidades de seus projetos.
+
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
