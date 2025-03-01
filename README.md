@@ -1,4 +1,4 @@
-# Título do Projeto
+# Puro Osso: Sua Loja de Artefatos Antigos
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
