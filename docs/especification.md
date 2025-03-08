@@ -17,6 +17,7 @@ A aplicação será utilizada em um ambiente digital, com a integração de tecn
 ## Objetivos
 
 Objetivo Geral
+
 Desenvolver uma plataforma online chamada Ossos do Ofício, que facilite a compra e venda de artefatos antigos e colecionáveis, garantindo a autenticidade das peças e oferecendo réplicas de alta qualidade, atendendo às necessidades de colecionadores e entusiastas que buscam confiança e segurança nas transações de itens com valor histórico.
 
 Objetivos Específicos
