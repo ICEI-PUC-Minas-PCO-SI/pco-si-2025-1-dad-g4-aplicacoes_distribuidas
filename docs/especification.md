@@ -104,7 +104,6 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Colecionador de Bugigangas  | Encontrar a colher sagrada de Atlântida            | Completar minha coleção de relíquias improváveis      |
 | Influencer Místico          | Comprar um cristal que brilha sozinho              | Criar vídeos virais sobre "energia cósmica"           |
 | Cientista Maluco            | Adquirir um frasco de antimatéria (vazio)          | Dizer que tenho um experimento revolucionário         |
-| Viajante do Tempo Falido    | Trocar um relógio quebrado pelo mapa do tesouro    | Tentar recuperar minha máquina do tempo               |
 
 
 ### Histórias de Usuários
