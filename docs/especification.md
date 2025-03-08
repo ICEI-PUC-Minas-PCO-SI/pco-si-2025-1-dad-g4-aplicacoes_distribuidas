@@ -119,23 +119,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+|RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | ALTA |  
+|RF-002| A aplicação deve permitir que o vendedor cadastre novas peças  | ALTA | 
+|RF-003| A aplicação deve permitir que o vendedor edite peças já existentes   | ALTA |
+|RF-004| A aplicação deve permitir que os usuários filtrem produtos por categoria, autenticidade e faixa de preço.  | ALTA |
+|RF-005| A aplicação deve permitir que compradores adicionem produtos a um carrinho de compras.  | ALTA |
+|RF-006| A aplicação deve permitir que os usuários finalizem a compra através de um sistema de pagamento seguro.  | ALTA |
+|RF-007| A aplicação deve exibir um histórico de compras para cada usuário. | MÉDIA |  
+|RF-008| A aplicação deve enviar notificações aos usuários sobre status de pedidos e atualizações importantes. | ALTA | 
+|RF-009| A aplicação deve permitir que os vendedores adicionem imagens e vídeos detalhados dos produtos. | MÉDIA |
+|RF-010| A aplicação deve permitir que compradores solicitem a devolução de um produto dentro de um prazo determinado.  | BAIXA |
+|RF-011| A aplicação deve permitir pagamentos via cartão de crédito, débito, Pix e boleto bancário.  | MÉDIA |
+|RF-012| A aplicação deve permitir que os usuários editem suas informações de perfil, como nome, endereço e telefone.  | MÉDIA |
 
 
-### Requisitos Não Funcionais
+
+### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| A aplicação deve ser responsiva | MÉDIA | 
 |RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RFN-003| A aplicação deve carregar qualquer página em no máximo 5 segundos para garantir uma navegação fluida. | ALTA |
-|RFN-004| O sistema deve suportar pelo menos 100 usuários simultâneos sem perda significativa de desempenho. | MÉDIA |
-|RFN-005| As buscas por artefatos devem retornar os resultados em até 5 segundos. | BAIXA |
-|RFN-006| A aplicação deve utilizar HTTPS para todas as comunicações, garantindo a proteção dos dados transmitidos. | ALTA |
-|RFN-007| A interface deve ser intuitiva, com um design responsivo que funcione em dispositivos móveis e desktops. | MÉDIA | 
-|RFN-008| Incluir tutoriais e dicas interativas para ajudar os usuários a explorar as funcionalidades. | BAIXA |
-
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
