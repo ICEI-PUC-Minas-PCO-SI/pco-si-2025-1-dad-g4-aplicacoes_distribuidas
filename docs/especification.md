@@ -65,11 +65,7 @@ Necessidades: Garantia de que os artefatos oferecidos possuem valor real e hist�
 
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
-
-Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
+Esta seção do documento visa apresentar a definição do problema que a aplicação Ossos do Ofício se propõe a resolver, bem como as ideias iniciais para a solução a partir da perspectiva do usuário. Para isso, serão abordados os seguintes pontos: definição de personas, histórias de usuários, requisitos funcionais e não funcionais, além das restrições do projeto. Através dessas informações, será possível obter uma visão clara do que a aplicação precisará oferecer e como ela atenderá às necessidades dos seus usuários.
 
 ## Personas
 
