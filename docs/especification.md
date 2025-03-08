@@ -1,57 +1,65 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+**Contextualização**
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
+O mercado de artefatos antigos e colecionáveis tem experimentado um crescimento significativo nos últimos anos, impulsionado pelo aumento do interesse por história, cultura e objetos com valor simbólico. Esse mercado é vasto e diversificado, com colecionadores, museus, historiadores e entusiastas buscando peças raras e únicas. A demanda por artefatos autênticos e bem conservados, tanto para o uso pessoal quanto para investimento, está em alta. No entanto, esse mercado também enfrenta desafios, como a crescente dificuldade em diferenciar peças genuínas de réplicas e falsificações, o que gera desconfiança entre os compradores e dificulta a validação de um item como legítimo.
 
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Diante desse cenário, surge a necessidade de uma plataforma especializada que não apenas ofereça artefatos antigos de diversas culturas e períodos históricos, mas também ofereça transparência e confiança ao consumidor. A *Ossos do Ofício* entra nesse mercado com uma proposta inovadora, unindo a paixão por história e a habilidade artesanal em uma plataforma online que garante a autenticidade das peças, ao mesmo tempo que oferece réplicas de alta qualidade para aqueles que buscam artefatos com valor estético e simbólico, mas com menor custo. Esse projeto visa preencher a lacuna existente entre o desejo dos consumidores por artefatos históricos e a dificuldade em acessar essas peças de forma segura e confiável.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
+O mercado de artefatos antigos enfrenta um problema crescente: a dificuldade em garantir a autenticidade das peças e a transparência para os compradores. Muitos colecionadores e entusiastas têm dificuldades em identificar se os artefatos são genuínos ou falsificados, o que gera um ambiente de desconfiança e incerteza. Além disso, o preço elevado das peças autênticas limita o acesso de muitos consumidores que desejam adquirir artefatos com valor histórico, mas não têm recursos para investir em itens genuínos.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+Este problema é exacerbado pela falta de plataformas especializadas que combinem segurança na autenticação de peças, ofereçam informações detalhadas sobre as origens dos artefatos e ao mesmo tempo disponibilizem réplicas de alta qualidade para quem busca artefatos acessíveis, mas igualmente ricos em valor simbólico e estético. O contexto envolve um mercado fragmentado, com compradores e vendedores muitas vezes sem acesso a informações claras e confiáveis, o que resulta em uma experiência de compra insatisfatória.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A aplicação será utilizada em um ambiente digital, com a integração de tecnologias que permitam a validação de autenticidade de artefatos e a criação de uma experiência de compra que atenda tanto colecionadores experientes quanto iniciantes. Nesse contexto, a necessidade de uma plataforma que resolva esses problemas de maneira clara e eficiente se torna urgente para garantir uma transação segura e satisfatória entre vendedores e compradores.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Objetivo Geral
+Desenvolver uma plataforma online chamada Ossos do Ofício, que facilite a compra e venda de artefatos antigos e colecionáveis, garantindo a autenticidade das peças e oferecendo réplicas de alta qualidade, atendendo às necessidades de colecionadores e entusiastas que buscam confiança e segurança nas transações de itens com valor histórico.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos Específicos
+
+Implementar um sistema de validação de autenticidade de artefatos, utilizando tecnologias que permitam a certificação de peças autênticas e a criação de um banco de dados transparente para que os compradores possam verificar a procedência de cada item. Esse sistema deve combinar ferramentas como análise de características físicas dos artefatos e documentação digital.
+
+Desenvolver uma interface amigável e intuitiva para o usuário, com foco na experiência de compra, categorização eficiente dos produtos e a oferta de informações detalhadas sobre cada artefato. A plataforma também deve permitir a compra de réplicas, oferecendo uma alternativa acessível para aqueles que não podem investir em itens originais, mas ainda desejam peças com alto valor estético e simbólico.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O mercado de artefatos antigos movimenta bilhões de dólares anualmente, mas enfrenta um grande desafio: a autenticidade das peças. Estudos indicam que cerca de 30% dos itens vendidos como "antigos" são falsificados, gerando desconfiança entre compradores e vendedores. Além disso, 70% dos consumidores afirmam que a autenticidade é um fator crucial na decisão de compra.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A escolha dos objetivos específicos visa resolver esses problemas. Implementar um sistema de validação de autenticidade garantirá maior confiança para os compradores, enquanto uma interface intuitiva proporcionará uma experiência de compra mais acessível e segura. Com isso, buscamos atender a uma necessidade real do mercado, criando um ambiente mais transparente e confiável para a compra de artefatos antigos.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+A aplicação Ossos do Ofício será voltada para um público diversificado, composto por diferentes perfis de usuários com interesses e necessidades variadas. A seguir, são descritos os perfis de usuários que utilizarão a plataforma:
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+1. Colecionadores Experientes
+Idade: 35-60 anos
+Conhecimento Prévio: Grande familiaridade com artefatos históricos e colecionáveis. Possuem experiência na compra e venda de itens raros e são exigentes quanto à autenticidade das peças.
+Relação com a Tecnologia: Confortáveis com o uso de plataformas digitais para compras online, mas preferem sites especializados e informativos, com autenticação clara e transparência.
+Necessidades: Garantia de autenticidade das peças, informações detalhadas sobre as origens e estado de conservação, além de um ambiente seguro e confiável para transações.
+2. Novos Colecionadores e Entusiastas
+Idade: 20-40 anos
+Conhecimento Prévio: Menos experientes em artefatos históricos, mas com forte interesse em aprender sobre arte e colecionismo. Podem estar começando suas coleções ou buscando peças específicas para decorar.
+Relação com a Tecnologia: Usuários frequentes de plataformas digitais, geralmente fluentes em tecnologia, e confortáveis em realizar compras online.
+Necessidades: Acessibilidade a informações claras sobre artefatos, opções de réplicas de alta qualidade a preços mais acessíveis, e uma interface fácil de navegar.
+3. Curadores e Profissionais de Museus
+Idade: 30-50 anos
+Conhecimento Prévio: Profundo conhecimento histórico e técnico sobre artefatos e peças antigas. Muitos têm experiência na aquisição de itens para museus ou exposições.
+Relação com a Tecnologia: Usuários experientes, mas preferem plataformas com foco em precisão e detalhes técnicos, não tanto em design ou conveniência.
+Necessidades: Acesso a artefatos autênticos e informações documentadas de forma clara, para garantir a credibilidade das peças em suas coleções e exibições.
+4. Vendedores e Artesãos de Réplicas
+Idade: 25-50 anos
+Conhecimento Prévio: Conhecimento técnico em técnicas de fabricação de réplicas e réplicas de artefatos históricos. Alguns podem ter experiência em vendas ou no mercado de artefatos antigos.
+Relação com a Tecnologia: Familiaridade com plataformas online para a venda de produtos, mas podem precisar de suporte em relação à exposição de seus produtos de forma eficaz.
+Necessidades: Plataforma para divulgar e vender réplicas de qualidade, com boas descrições e imagens, além de um sistema que os conecte a compradores interessados.
+5. Investidores e Compradores de Arte
+Idade: 40-65 anos
+Conhecimento Prévio: Conhecimento sobre o mercado de arte e colecionáveis, com foco em peças de alto valor e potencial de valorização.
+Relação com a Tecnologia: Moderada, utilizam plataformas digitais com foco em produtos de valor elevado e buscam mais informações sobre o histórico de uma peça antes de realizar a compra.
+Necessidades: Garantia de que os artefatos oferecidos possuem valor real e histórico, com uma plataforma confiável e segura para realizar transações de alto valor.
 
 
 # Especificações do Projeto
