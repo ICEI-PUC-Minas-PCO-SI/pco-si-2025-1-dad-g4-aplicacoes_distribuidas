@@ -109,30 +109,30 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Histórias de Usuários
 - Teórico da Conspiração – O Caçador de Verdades Ocultas
-"Eles riem de mim agora, mas quando a verdade vier à tona, serei lembrado como um visionário!"
+  
 Como Teórico da Conspiração, eu passo os dias conectando pontos que ninguém mais vê, investigando as verdades que "eles" não querem que saibamos. Eu quero comprar o Dente de Alienígena Classe Z, para que finalmente eu tenha uma prova irrefutável de que não estamos sozinhos no universo.
 Meu maior desafio é convencer as pessoas de que este dente não é um simples pedaço de plástico perdido por um turista em Roswell.
 Preciso de um sistema de autenticação de itens que me forneça "provas concretas" da origem extraterrestre dos produtos, com descrições detalhadas e certificados questionáveis de autenticidade.
 
 - Mago de YouTube – O Feiticeiro do Algoritmo
-"A magia está nos olhos de quem assiste... e nos cliques de quem compartilha!"
+  
 Como Mago de YouTube, eu misturo misticismo e entretenimento para conquistar views e seguidores. Meu canal já testou feitiços de livros duvidosos, rituais proibidos e até a famosa "magia da cebola contra energias ruins". Agora, eu quero a Varinha de Plástico Amaldiçoada, para que meus truques pareçam reais e, quem sabe, eu finalmente consiga lançar um feitiço que não pareça um truque de festa infantil.
 Meu maior desafio é fazer as pessoas acreditarem que esta varinha tem algum poder, além do de quebrar na terceira tentativa de feitiço. Preciso que os artefatos tenham uma descrição convincente e imagens bem trabalhadas para que eu possa mostrar no meu canal sem parecer um charlatão (mesmo sendo um).
 
 - Colecionador de Bugigangas – O Acumulador de Lendas
-"A história está nos objetos... e na minha casa, onde não cabe mais nada!"
+  
 Como Colecionador de Bugigangas, eu sou obcecado por artefatos misteriosos, curiosidades históricas e objetos sem nenhuma utilidade prática. Minha coleção já inclui a tampa de um sarcófago de plástico e um bilhete escrito por um monge em 2013 (mas que parece medieval). Agora, eu quero a Colher Sagrada de Atlântida, para que eu possa dizer a todos que possuo a única relíquia culinária do continente perdido.
 Meu maior desafio é evitar que meus amigos descubram que a tal colher tem um código de barras e custou R$ 9,90.
 Preciso de um catálogo organizado que me permita filtrar os artefatos por grau de obscuridade e estranheza, além de um sistema que me ajude a justificar para minha família porque estou comprando mais tralha.
 
 - Influencer Místico – A Diva da Energia Cósmica
-"A energia do universo está ao meu redor... mas um bom filtro do Instagram sempre ajuda!"
+  
 Como Influencer Místico, eu sou especialista em cristaloterapia, tarot e na arte de parecer iluminada em fotos de pôr do sol. Eu quero o Cristal que Brilha Sozinho, para que eu possa mostrar aos meus seguidores que minha energia é tão poderosa que os objetos ao meu redor simplesmente se iluminam.
 Meu maior desafio é explicar porque o cristal só brilha quando está perto de uma tomada.
 Preciso que o site tenha um layout harmonioso e esteticamente agradável para que eu possa tirar prints e divulgar no meu feed, além de descrições místicas que pareçam profundas, mesmo sem fazer sentido.
 
 - Cientista Maluco – O Visionário Incompreendido
-"Eles chamam de loucura... eu chamo de ciência!"
+
 Como Cientista Maluco, eu vivo para desafiar as leis da física, misturar substâncias aleatórias e tentar construir dispositivos que nem eu sei como funcionam. Eu quero o Frasco de Antimatéria (Vazio), para que eu possa tentar preenchê-lo e revolucionar a ciência, ou pelo menos assustar meus vizinhos.
 Meu maior desafio? Descobrir como um frasco pode estar "vazio" de algo que não deveria existir em primeiro lugar.
 Preciso de uma seção no site dedicada a "achados científicos" para que eu possa adquirir itens bizarros sem que pareça que estou apenas comprando lixo caro.
