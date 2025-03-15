@@ -237,14 +237,18 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 
 ### Sprint 1
 
-Atualizado em: 21/04/2024
+Atualizado em: 14/03/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Ana Clara       | Requisitos Funcionais | 07/03/2025     | 21/03/2025 | ✔️    | 14/03/2025      |
+| Bárbara    | Histórias de Usuários    | 07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
+| Leni        | Requisitos Não Funcionais  | 07/03/2025     | 21/03/2025 | ✔️    | 14/03/2025      |
+| Guilherme        | Introdução e Objetivos |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
+| Matheus        | Histórias de Usuários |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
+|         | Tecnologias Utilizadas |  /03/2025     | 21/03/2025 | ❌    | /2025      |
+| Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
+| Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
 
 ### Sprint 2
 
