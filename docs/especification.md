@@ -145,17 +145,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
 |RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | ALTA |  
-|RF-002| A aplicação deve permitir que o vendedor cadastre novas peças  | ALTA | 
-|RF-003| A aplicação deve permitir que o vendedor edite peças já existentes   | ALTA |
-|RF-004| A aplicação deve permitir que os usuários filtrem produtos por categoria, autenticidade e faixa de preço.  | ALTA |
-|RF-005| A aplicação deve permitir que compradores adicionem produtos a um carrinho de compras.  | ALTA |
-|RF-006| A aplicação deve permitir que os usuários finalizem a compra através de um sistema de pagamento seguro.  | ALTA |
-|RF-007| A aplicação deve exibir um histórico de compras para cada usuário. | MÉDIA |  
-|RF-008| A aplicação deve enviar notificações aos usuários sobre status de pedidos e atualizações importantes. | ALTA | 
-|RF-009| A aplicação deve permitir que os vendedores adicionem imagens e vídeos detalhados dos produtos. | MÉDIA |
-|RF-010| A aplicação deve permitir que compradores solicitem a devolução de um produto dentro de um prazo determinado.  | BAIXA |
-|RF-011| A aplicação deve permitir pagamentos via cartão de crédito, débito, Pix e boleto bancário.  | MÉDIA |
-|RF-012| A aplicação deve permitir que os usuários editem suas informações de perfil, como nome, endereço e telefone.  | MÉDIA |
+|RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças  | ALTA | 
+|RF-003| A aplicação deve permitir que os usuários filtrem produtos por categoria, autenticidade e faixa de preço.  | ALTA |
+|RF-004| A aplicação deve permitir que compradores adicionem produtos a um carrinho de compras.  | ALTA |
+|RF-005| A aplicação deve permitir que os usuários finalizem a compra através de um sistema de pagamento seguro.  | ALTA |
+|RF-006| A aplicação deve exibir um histórico de compras para cada usuário. | MÉDIA |  
+|RF-007| A aplicação deve enviar notificações aos usuários sobre status de pedidos e atualizações importantes. | ALTA | 
+|RF-008| A aplicação deve permitir que os vendedores adicionem imagens e vídeos detalhados dos produtos. | MÉDIA |
+|RF-009| A aplicação deve permitir que compradores solicitem a devolução de um produto dentro de um prazo determinado.  | BAIXA |
+|RF-010| A aplicação deve permitir pagamentos via cartão de crédito, débito, Pix e boleto bancário.  | MÉDIA |
+
 
 
 
