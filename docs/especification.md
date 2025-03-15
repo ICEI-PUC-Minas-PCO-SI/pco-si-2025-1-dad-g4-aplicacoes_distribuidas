@@ -164,11 +164,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| A aplicação deve ser responsiva | MÉDIA | 
 |RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| A aplicação deve carregar qualquer página em no máximo 5 segundos para garantir uma navegação fluida. | ALTA |
-|RNF-004| O sistema deve suportar pelo menos 100 usuários simultâneos sem perda significativa de desempenho. | MÉDIA |
-|RNF-005| As buscas por artefatos devem retornar os resultados em até 5 segundos. | BAIXA |
-|RNF-006| A interface deve ser intuitiva, com um design responsivo que funcione em dispositivos móveis e desktops. | MÉDIA | 
-|RNF-007| Incluir tutoriais e dicas interativas para ajudar os usuários a explorar as funcionalidades. | BAIXA |
+|RNF-003| O sistema deve suportar pelo menos 100 usuários simultâneos sem perda significativa de desempenho. | MÉDIA |
+|RNF-004| A interface deve ser intuitiva, com um design responsivo que funcione em dispositivos móveis e desktops. | MÉDIA | 
+|RNF-005| Incluir tutoriais e dicas interativas para ajudar os usuários a explorar as funcionalidades. | BAIXA |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
