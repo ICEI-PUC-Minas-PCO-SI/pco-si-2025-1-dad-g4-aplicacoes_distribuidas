@@ -203,13 +203,30 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
+![Arquitetura da solução](img/arquiteturaDaSolucao.jpeg)
+
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+### 📌 Tecnologias Utilizadas na Implementação da Solução
+Para desenvolver a solução, utilizaremos uma arquitetura baseada em microserviços, garantindo escalabilidade, desempenho e modularidade. Abaixo estão as principais tecnologias e ferramentas empregadas:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+### 🖥️ Linguagens e Frameworks
+.NET Core – Utilizado para desenvolvimento dos microserviços.
+C# – Linguagem principal para a implementação da lógica de negócio.
+Svelte – Framework utilizado para o frontend da aplicação.
+Tailwind css - Framework css para estilização
+Redis – Banco de dados em memória para caching e otimização de performance.
+### 🛠️ Serviços e Ferramentas
+SQL Server – Banco de dados relacional para armazenamento persistente de dados.
+RabbitMQ – Serviço de mensageria para comunicação assíncrona entre os microserviços, implementando um Event Bus.
+API Gateway (provavelmente Ocelot ou Spring Cloud Gateway) – Responsável por rotear requisições entre clientes e microserviços, garantindo segurança e balanceamento de carga.
+Docker e Kubernetes (se necessário) – Para orquestração e gerenciamento dos serviços em produção.
+### 🖥️ IDEs e Ambientes de Desenvolvimento
+Visual Studio / VS Code – Utilizados para desenvolvimento backend com C#/.NET.
+Postman – Para testes de APIs REST.
+Docker – Para containerização dos microserviços e suas dependências.
+
 
 # Planejamento do projeto
 
@@ -218,10 +235,10 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 > Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
 
 ### Sprint 1
-- _Scrum master_: AlunaX
+- _Scrum master_: Guilherme Henrique de Lima Machado
 - Protótipos: AlunoY
 - Testes: AlunoK
-- Documentação: AlunaZ
+- Documentação: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
 
 ### Sprint 2
 - _Scrum master_: AlunaY
@@ -235,7 +252,7 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 
 ### Sprint 1
 
-Atualizado em: 14/03/2025
+Atualizado em: 19/03/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
@@ -244,7 +261,7 @@ Atualizado em: 14/03/2025
 | Leni        | Requisitos Não Funcionais  | 07/03/2025     | 21/03/2025 | ✔️    | 14/03/2025      |
 | Guilherme        | Introdução e Objetivos |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
 | Matheus        | Histórias de Usuários |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
-|         | Tecnologias Utilizadas |  /03/2025     | 21/03/2025 | ❌    | /2025      |
+| Matheus         | Tecnologias Utilizadas |  19/03/2025     | 19/03/2025 | ✔️    | 19/03/2025      |
 | Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
 | Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
 
