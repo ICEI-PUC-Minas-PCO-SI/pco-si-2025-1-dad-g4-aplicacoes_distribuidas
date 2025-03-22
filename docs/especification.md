@@ -192,6 +192,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| A aplicação deve ser restrita à comercialização de artefatos antigos |
 |03| Exige compatibilidade com tecnologias .Net e SQL Server |
+|04| A plataforma não deve permitir pagamentos em dinheiro, apenas cartão e/ou pix |
+|05| A aplicação deve funcionar adequadamente em dispositivos móveis e desktops |
 
 # Arquitetura da Solução
 
