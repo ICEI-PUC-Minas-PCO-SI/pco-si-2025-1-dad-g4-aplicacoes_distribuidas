@@ -230,15 +230,15 @@ Docker – Para containerização dos microserviços e suas dependências.
 
 ### Sprint 1
 - _Scrum master_: Guilherme Henrique de Lima Machado
-- Protótipos: AlunoY
-- Testes: AlunoK
+- Protótipos: Bárbara Xavier
+- Testes: Felipe Fernandes
 - Documentação: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
 
 ### Sprint 2
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- _Scrum master_: Guilherme Henrique de Lima Machado
+- Desenvolvedor _front-end_: Ana Clara Lima Marçal
+- Desenvolvedor _back-end_: Matheus Henrique Marques Canuto
+- Testes: Leni Rocha
 
 ##  Quadro de tarefas
 
@@ -262,14 +262,14 @@ Atualizado em: 19/03/2025
 
 ### Sprint 2
 
-Atualizado em: 21/04/2024
+Atualizado em: 21/03/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| Ana Clara       | Página inicial   | 01/04/2025     | 07/04/2024 | ✔️    | 05/04/2025     |
+| Matheus Canuto        | CSS unificado    | 03/04/2025    | 10/04/2025 | 📝    |                 |
+| Bárbara        | Página de login  | 01/04/2024     | 07/04/2024 | ⌛     |                 |
+| Felipe Fernandes        | Script de login  |  01/04/2024    | 12/04/2025 | ❌    |       |
 
 
 Legenda:
