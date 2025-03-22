@@ -194,6 +194,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |03| Exige compatibilidade com tecnologias .Net e SQL Server |
 |04| A plataforma não deve permitir pagamentos em dinheiro, apenas cartão e/ou pix |
 |05| A aplicação deve funcionar adequadamente em dispositivos móveis e desktops |
+|06| O projeto deve utilizar microsserviços |
 
 # Arquitetura da Solução
 
