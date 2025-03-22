@@ -190,8 +190,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-|03| 
+|02| A aplicação deve ser restrita à comercialização de artefatos antigos |
+|03| Exige compatibilidade com tecnologias .Net e SQL Server |
 
 # Arquitetura da Solução
 
@@ -258,6 +258,7 @@ Atualizado em: 19/03/2025
 | Matheus         | Tecnologias Utilizadas |  19/03/2025     | 19/03/2025 | ✔️    | 19/03/2025      |
 | Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
 | Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
+| Leni        | Restrições  | 21/03/2025     | 22/03/2025 | ✔️    | 21/03/2025      |
 
 ### Sprint 2
 
