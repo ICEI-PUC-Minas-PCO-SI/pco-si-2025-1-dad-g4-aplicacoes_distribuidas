@@ -243,6 +243,14 @@ Docker – Para containerização dos microserviços e suas dependências.
 - Desenvolvedor _back-end_: Matheus Henrique Marques Canuto
 - Testes: Leni Rocha
 
+### Sprint 3
+- _Scrum master_: Bárbara Xavier
+- Desenvolvedor _front-end_: Felipe Fernandes
+- Desenvolvedor _back-end_: Guilherme Henrique de Lima Machado
+- Testes: Matheus Henrique Marques Canuto
+- Documentação: Ana Clara Lima Marçal, Leni Rocha Bento
+
+
 ##  Quadro de tarefas
 
 > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
@@ -274,6 +282,15 @@ Atualizado em: 21/03/2025
 | Bárbara        | Página de login  | 01/04/2024     | 07/04/2024 | 📝     | 20/05/2025                |
 | Felipe Fernandes        | Script de login  |  01/04/2024    | 12/04/2025 | 📝    | 10/05/2025      |
 
+
+Atualizado em: 23/03/2025
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Bárbara       | Implementação da API de autenticação   | 15/04/2025     | 22/04/2025 | 📝    | /2025     |
+| Felipe Fernandes        | Validação e testes da API   | 17/04/2025    | 25/04/2025 | 📝    | /2025                |
+| Guilherme        | Integração da API com o front-end | 18/04/2025     | 28/04/2025 | 📝    | /2025                |
+| Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 30/04/2025 | 📝    | /2025      |
 
 Legenda:
 - ✔️: terminado
