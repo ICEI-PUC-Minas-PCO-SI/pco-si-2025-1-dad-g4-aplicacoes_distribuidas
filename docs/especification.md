@@ -256,6 +256,7 @@ Atualizado em: 21/03/2025
 | Matheus Canuto        | CSS unificado    | 03/04/2025    | 10/04/2025 | 📝    | 12/04/2025                |
 | Bárbara        | Página de login  | 01/04/2024     | 07/04/2024 | 📝     | 20/05/2025                |
 | Felipe Fernandes        | Script de login  |  01/04/2024    | 12/04/2025 | 📝    | 10/05/2025      |
+| Guilherme Machado        | Microsserviço de Pagamento  |  28/03/2024    | 12/04/2025 | 📝    |       |
 
 
 Atualizado em: 23/03/2025
