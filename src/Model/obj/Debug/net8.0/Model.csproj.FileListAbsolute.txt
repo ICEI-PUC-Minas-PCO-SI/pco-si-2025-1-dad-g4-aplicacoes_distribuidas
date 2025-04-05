@@ -1,0 +1,12 @@
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\bin\Debug\net8.0\Model.deps.json
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\bin\Debug\net8.0\Model.dll
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\bin\Debug\net8.0\Model.pdb
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.AssemblyInfoInputs.cache
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.AssemblyInfo.cs
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.sourcelink.json
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.dll
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\refint\Model.dll
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\Model.pdb
+C:\Users\Matheus Canuto\Projects\pco-si-2025-1-dad-g4-aplicacoes_distribuidas\src\Model\obj\Debug\net8.0\ref\Model.dll
