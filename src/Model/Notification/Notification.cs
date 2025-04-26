@@ -8,6 +8,6 @@ namespace Model.Notification
 {
     class Notification
     {
-
+        public int MyProperty { get; set; }
     }
 }
