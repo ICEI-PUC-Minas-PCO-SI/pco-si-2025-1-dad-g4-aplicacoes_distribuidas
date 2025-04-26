@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Model.Payments;
 using System.Collections.Generic;
 using System.Linq;
-
 using API.Data;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
