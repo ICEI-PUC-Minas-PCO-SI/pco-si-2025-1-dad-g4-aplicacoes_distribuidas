@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using API.Data;
 using Model.Order;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +16,7 @@ namespace API.Controllers
             _context = context;
         }
 
+        // ✅ Criar novo pedido
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Order order)
         {
@@ -25,7 +24,7 @@ namespace API.Controllers
                 return BadRequest(new { message = "Dados do pedido inválidos." });
 
             order.Date = DateTime.Now;
-            order.Status = "Pendente";
+            order.Status = "Pagamento em Processamento";
 
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
@@ -33,6 +32,7 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = order.Id }, order);
         }
 
+        // ✅ Listar todos os pedidos
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -40,6 +40,7 @@ namespace API.Controllers
             return Ok(orders);
         }
 
+        // ✅ Buscar pedido por ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -50,6 +51,7 @@ namespace API.Controllers
             return Ok(order);
         }
 
+        // ✅ Atualizar status do pedido
         [HttpPut("{id}/status")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
         {
@@ -57,8 +59,21 @@ namespace API.Controllers
             if (order == null)
                 return NotFound(new { message = "Pedido não encontrado." });
 
-            if (string.IsNullOrEmpty(status))
-                return BadRequest(new { message = "Status não pode ser vazio." });
+            var validStatuses = new List<string>
+            {
+                "Pagamento em Processamento",
+                "Pagamento Aprovado",
+                "Enviado",
+                "Recebido"
+            };
+
+            if (string.IsNullOrEmpty(status) || !validStatuses.Contains(status))
+            {
+                return BadRequest(new
+                {
+                    message = "Status inválido. Os status válidos são: " + string.Join(", ", validStatuses)
+                });
+            }
 
             order.Status = status;
             await _context.SaveChangesAsync();
@@ -67,4 +82,3 @@ namespace API.Controllers
         }
     }
 }
-
