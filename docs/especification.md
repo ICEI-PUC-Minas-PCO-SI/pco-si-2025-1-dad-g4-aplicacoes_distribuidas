@@ -270,7 +270,7 @@ Atualizado em: 23/03/2025
 | Guilherme        | Integração da API com o front-end | 18/04/2025     | 28/04/2025 | 📝    | /2025                |
 | Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 30/04/2025 | 📝    | /2025      |
 | Leni Rocha       | Testes de Produtos  |  01/04/2025    | 10/05/2025 | 📝   |   /2025    |
-
+| Ana Clara        | Status dos Pedidos  |  28/04/2025    | 20/05/2025 | 📝   |   /2025    |
 
 ### Sprint 3
 
