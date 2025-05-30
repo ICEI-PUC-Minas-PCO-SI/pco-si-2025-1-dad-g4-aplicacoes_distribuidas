@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250523233621_Notification")]
+    partial class Notification
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,38 +79,13 @@ namespace API.Migrations
                     b.ToTable("Payments");
                 });
 
-
-            modelBuilder.Entity("Model.Products.Products", b =>
-
             modelBuilder.Entity("Notification", b =>
-
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)");
-
-                    b.Property<int>("Estoque")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("numeric");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
 
                     b.PrimitiveCollection<List<string>>("BlindCarbonCopyRecipients")
                         .IsRequired()
@@ -160,7 +138,6 @@ namespace API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Notification");
-
                 });
 #pragma warning restore 612, 618
         }
