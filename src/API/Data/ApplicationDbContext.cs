@@ -1,10 +1,7 @@
 ﻿using API.Controllers;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
 using Model.Payments; 
 using Model.Products;
-=======
-using Model.Payments;
 
 
 namespace API.Data
