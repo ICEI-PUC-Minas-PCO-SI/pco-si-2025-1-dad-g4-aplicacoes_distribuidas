@@ -161,7 +161,7 @@ namespace API.Migrations
 
                     b.ToTable("Notification");
 
-                });
+                }));
 #pragma warning restore 612, 618
         }
     }
