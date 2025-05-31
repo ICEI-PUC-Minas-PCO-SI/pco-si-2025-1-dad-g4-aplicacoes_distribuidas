@@ -1,6 +1,8 @@
 ﻿using API.Controllers;
+using API.Migrations;
 using Microsoft.EntityFrameworkCore;
 using Model.Autentication;
+using Model.Order;
 using Model.Payments; 
 using Model.Products;
 
@@ -14,6 +16,7 @@ namespace API.Data
         public DbSet<Products> Products { get; set; }
         public DbSet<Notification> Notification { get; set; }
         public DbSet<Autentication> Autentication { get; set; }
+        public DbSet<Order> Order { get; set; }
 
     }
 }

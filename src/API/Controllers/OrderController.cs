@@ -9,9 +9,9 @@ namespace API.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public OrderController(AppDbContext context)
+        public OrderController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -26,7 +26,7 @@ namespace API.Controllers
             order.Date = DateTime.Now;
             order.Status = "Pagamento em Processamento";
 
-            _context.Orders.Add(order);
+            _context.Order.Add(order);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetById), new { id = order.Id }, order);
@@ -36,7 +36,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var orders = await _context.Orders.ToListAsync();
+            var orders = await _context.Order.ToListAsync();
             return Ok(orders);
         }
 
@@ -44,7 +44,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
+            var order = await _context.Order.FindAsync(id);
             if (order == null)
                 return NotFound(new { message = "Pedido não encontrado." });
 
@@ -55,7 +55,7 @@ namespace API.Controllers
         [HttpPut("{id}/status")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
         {
-            var order = await _context.Orders.FindAsync(id);
+            var order = await _context.Order.FindAsync(id);
             if (order == null)
                 return NotFound(new { message = "Pedido não encontrado." });
 
