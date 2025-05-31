@@ -6,6 +6,11 @@ using MimeKit;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
 using System.Reflection;
+using Model.Notification;
+using Microsoft.Extensions.Options;
+using Org.BouncyCastle.Asn1.Ocsp;
+using API.Service;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 namespace API.Controllers
 {
@@ -14,32 +19,60 @@ namespace API.Controllers
     public class NotificationController : ControllerBase
     {
         private ApplicationDbContext _context;
-        public NotificationController(ApplicationDbContext context)
+        private readonly EmailSettings _emailSettings;
+        public NotificationController(
+            ApplicationDbContext context, 
+            IOptions<EmailSettings> emailSettings)
         {
+            _emailSettings = emailSettings.Value;
             _context = context;
         }
 
         [HttpPost]
-        public async Task<ActionResult<Notification>> SendEmail(Notification todoItem)
+        public async Task<ActionResult<Notification>> SendEmail(Notification model)
         {
-            var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Matheus", "matheuscanuto07@gmail.com"));
-            message.To.Add(new MailboxAddress("Alice", "matheushenriquecanuto77@gmail.com"));
-            message.Subject = "Tamo testando tamo testando";
 
-            message.Body = new TextPart("plain")
+            try
             {
-                Text = 
-                @"Hey Alice,
+                // Mockandos os dados se não tiver paramêtro
+                if (String.IsNullOrEmpty(model.ClientName) || model.ClientName == "string")
+                {
+                    model.ClientName = "Kleber, me deu ATP, professor gente boa dms";
+                    model.cupomDeDesconto = "BONE-15";
+                }
+                var htmlContent = EmailService.WelcomeEmail(model.ClientName, model.cupomDeDesconto);
 
-                    What are you up to this weekend? Monica is throwing one of her parties on
-                    Saturday and I was hoping you could make it.
-                    
-                    Will you be my +1?
-                    
-                    -- Joey
-                    "
-            };
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress(_emailSettings.FromName, _emailSettings.FromAddress));
+                message.To.Add(new MailboxAddress("Destinatário", "matheushenriquecanuto77@gmail.com"));
+                message.Subject = "Bem-vindo(a) ao Time dos Caçadores de Relíquias!";
+
+                message.Body = new TextPart("html")
+                {
+                    Text = htmlContent
+                };
+
+                using (var client = new SmtpClient())
+                {
+                    await client.ConnectAsync(
+                        _emailSettings.SmtpServer,
+                        _emailSettings.SmtpPort,
+                        false
+                    );
+                    await client.AuthenticateAsync(
+                        _emailSettings.SmtpUsername,
+                        _emailSettings.SmtpPassword
+                    );
+                    await client.SendAsync(message);
+                    await client.DisconnectAsync(true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Falha ao enviar e-mail.");
+            }
+
 
             Notification n = new Notification
             {
