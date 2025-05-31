@@ -1,77 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 namespace Model.Cart
 {
     public class Cart
     {
-        // Propriedades básicas do carrinho
-        public int Id { get; set; }
-        public string UserId { get; set; }  // Para associar o carrinho a um usuário
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedAt { get; set; }
+        public List<CartItem> Items { get; } = new List<CartItem>();
 
-        // Itens do carrinho
-        public List<CartItem> Items { get; set; } = new List<CartItem>();
-
-        // Propriedades calculadas
-        public int TotalItems => Items.Sum(item => item.Quantity);
-        public decimal TotalPrice => Items.Sum(item => item.Quantity * item.Price);
-
-        // Métodos para manipulação do carrinho
-        public void AddItem(CartItem item)
+        // Adiciona ou atualiza item no carrinho
+        public void AddItem(int productId, string name, decimal price, int quantity = 1)
         {
-            var existingItem = Items.FirstOrDefault(i => i.ProductId == item.ProductId);
+            var item = Items.FirstOrDefault(i => i.ProductId == productId);
 
-            if (existingItem != null)
+            if (item != null)
             {
-                existingItem.Quantity += item.Quantity;
+                item.Quantity += quantity;
             }
             else
             {
-                Items.Add(item);
+                Items.Add(new CartItem
+                {
+                    ProductId = productId,
+                    ProductName = name,
+                    Price = price,
+                    Quantity = quantity
+                });
             }
-
-            UpdatedAt = DateTime.UtcNow;
         }
 
+        // Remove item do carrinho
         public void RemoveItem(int productId)
         {
-            var itemToRemove = Items.FirstOrDefault(i => i.ProductId == productId);
-            if (itemToRemove != null)
-            {
-                Items.Remove(itemToRemove);
-                UpdatedAt = DateTime.UtcNow;
-            }
+            Items.RemoveAll(i => i.ProductId == productId);
         }
 
-        public void UpdateQuantity(int productId, int newQuantity)
-        {
-            var item = Items.FirstOrDefault(i => i.ProductId == productId);
-            if (item != null)
-            {
-                item.Quantity = newQuantity;
-                UpdatedAt = DateTime.UtcNow;
-            }
-        }
+        // Limpa todo o carrinho
+        public void Clear() => Items.Clear();
 
-        public void ClearCart()
-        {
-            Items.Clear();
-            UpdatedAt = DateTime.UtcNow;
-        }
+        // Calcula o total
+        public decimal Total => Items.Sum(i => i.Price * i.Quantity);
     }
 
     public class CartItem
     {
-        public int Id { get; set; }
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-        public string ProductImage { get; set; }
         public decimal Price { get; set; }
-        public int Quantity { get; set; }
-
-        // Data de adição ao carrinho
-        public DateTime AddedAt { get; set; } = DateTime.UtcNow;
+        public int Quantity { get; set; } = 1;
     }
 }
