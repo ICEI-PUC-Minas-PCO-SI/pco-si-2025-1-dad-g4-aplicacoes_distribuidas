@@ -13,14 +13,14 @@ namespace Model.Order
         public int Id { get; set; }
 
         [Required]
-        public string Customer { get; set; }  // Nome do cliente
+        public string Customer { get; set; }
 
         [Required]
-        public DateTime Date { get; set; } = DateTime.Now;
+        public DateTime Date { get; set; }
 
         [Required]
         public decimal Total { get; set; }
 
-        public string Status { get; set; } = "Pendente";
+        public string Status { get; set; }
     }
 }
