@@ -99,6 +99,31 @@ namespace API.Migrations
                     b.ToTable("Autentication");
                 });
 
+            modelBuilder.Entity("Model.Autentication.Autentication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Autentication");
+                });
+
             modelBuilder.Entity("Model.Payments.Payments", b =>
                 {
                     b.Property<int>("Id")
