@@ -18,9 +18,3 @@ public class Notification
 
     }
 }
-
-//public class Attachment
-//{
-//    public string FileName { get; set; }
-//    public string FilePath { get; set; }
-//}
