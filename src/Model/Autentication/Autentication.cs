@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model.Autentication
 {
-    class Autentication
+    public class Autentication
     {
+        public int Id { get; set; }
+        public string Username { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
+        public string Role { get; set; } = "User"; // pode ser "Admin", "User", "Vendedor", etc.
+
+        public Autentication() 
+        {
+
+        }
 
     }
 }
+
