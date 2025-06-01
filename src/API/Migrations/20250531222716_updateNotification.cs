@@ -14,30 +14,14 @@ namespace API.Migrations
                 name: "ClientName",
                 table: "Notification",
                 type: "text",
-<<<<<<< HEAD
-<<<<<<< HEAD
                 nullable: true,
-=======
-                nullable: false,
->>>>>>> 6f91623 (send email)
-=======
-                nullable: true,
->>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "cupomDeDesconto",
                 table: "Notification",
                 type: "text",
-<<<<<<< HEAD
-<<<<<<< HEAD
                 nullable: true,
-=======
-                nullable: false,
->>>>>>> 6f91623 (send email)
-=======
-                nullable: true,
->>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
                 defaultValue: "");
         }
 
