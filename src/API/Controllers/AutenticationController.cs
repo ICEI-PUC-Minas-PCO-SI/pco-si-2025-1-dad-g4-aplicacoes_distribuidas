@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
 using Model.Autentication;
-using Microsoft.AspNetCore.Identity.Data;
 
 namespace API.Controllers
 {
@@ -18,21 +17,31 @@ namespace API.Controllers
             _context = context;
         }
 
-        // Cadastro de usuário
-        [HttpPost]
-        public async Task<ActionResult> Cadastro(Autentication model)
+        // Retorna todos os usuários cadastrados
+        // Funciona utilizando o mesmo caminho de pesquisa por ID, mas sem incluir o ID
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<object>>> GetAllUsers()
         {
-            // Verifica se já existe um usuário com esse nome
-            var usuarioExistente = await _context.Autentication
-                .AnyAsync(u => u.Username == model.Username);
+            var users = await _context.Autentication
+                .Select(u => new {
+                    u.Id,
+                    u.Username,
+                    u.Role
+                })
+                .ToListAsync();
 
-            if (usuarioExistente)
-            {
-                return Conflict("Usuário já está cadastrado.");
-            }
+            return Ok(users);
+        }
 
-            // Hasheia a senha antes de salvar
+
+        // Cadastra usuário
+        [HttpPost]
+        public async Task<ActionResult> Register(Autentication model)
+        {
+            // hashear a senha
             var hasher = new PasswordHasher<Autentication>();
+
+            // senha digitada é transformada em um hash seguro
             model.PasswordHash = hasher.HashPassword(model, model.PasswordHash);
 
             // Salva no banco
@@ -51,37 +60,31 @@ namespace API.Controllers
             if (user == null)
                 return NotFound("Usuário não encontrado");
 
-            user.PasswordHash = null; // Não mostra a senha por segurança
+            user.PasswordHash = null;
             return Ok(user);
         }
 
         // Atualiza dados do usuário
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] Autentication updateModel)
+        public async Task<ActionResult> Update(int id, [FromBody] Autentication updateModel)
         {
             var user = await _context.Autentication.FindAsync(id);
             if (user == null)
                 return NotFound("Usuário não encontrado");
 
-            if (!string.IsNullOrWhiteSpace(updateModel.Username))
-                user.Username = updateModel.Username;
+            user.Username = updateModel.Username;
+            user.Role = updateModel.Role;
 
-            if (!string.IsNullOrWhiteSpace(updateModel.Role))
-                user.Role = updateModel.Role;
-
+           
             if (!string.IsNullOrWhiteSpace(updateModel.PasswordHash))
             {
                 var hasher = new PasswordHasher<Autentication>();
                 user.PasswordHash = hasher.HashPassword(user, updateModel.PasswordHash);
             }
 
-            _context.Entry(user).State = EntityState.Modified;
-
             await _context.SaveChangesAsync();
-
-            return Ok("Usuário atualizado com sucesso");
+            return Ok("Usuário atualizado");
         }
-
 
         // Login
         [HttpPost("login")]
@@ -102,12 +105,6 @@ namespace API.Controllers
             return Ok("Login realizado com sucesso");
         }
 
-        public class ForgotPasswordRequest
-        {
-            public string Username { get; set; }
-        }
-
-
         // Esqueci minha senha
         [HttpPost("forgot-password")]
         public async Task<ActionResult> ForgotPassword([FromBody] string username)
@@ -116,7 +113,7 @@ namespace API.Controllers
             if (user == null)
                 return NotFound("Usuário não encontrado");
 
-            // Gera uma nova senha temporária aleatória
+            // Gera uma nova senha até o usuário atualizar
             string novaSenha = Guid.NewGuid().ToString().Substring(0, 8);
 
             var hasher = new PasswordHasher<Autentication>();
@@ -124,27 +121,7 @@ namespace API.Controllers
 
             await _context.SaveChangesAsync();
 
-            return Ok($"Nova senha gerada: {novaSenha}. Não esqueça de atualizar para uma senha do seu interesse mais tarde");
+            return Ok($"Nova senha gerada: {novaSenha}");
         }
-
-
-
-        // Deleta usuário pelo ID
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> DeletarUsuario(int id)
-        {
-            var user = await _context.Autentication.FindAsync(id);
-
-            if (user == null)
-            {
-                return NotFound("Usuário não encontrado");
-            }
-
-            _context.Autentication.Remove(user);
-            await _context.SaveChangesAsync();
-
-            return Ok($"Usuário {user} deletado com sucesso");
-        }
-
     }
 }
