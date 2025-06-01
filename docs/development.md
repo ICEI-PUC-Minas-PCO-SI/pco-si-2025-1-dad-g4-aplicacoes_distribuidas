@@ -95,12 +95,11 @@ A aplicação permite que usuários se cadastrem e façam login.
 **Artefatos criados:**  
 - **API**  
   - `Controllers/AutenticacaoController.cs`  
-  - `Service/AutenticacaoService.cs`  
 - **Model**  
   - `Autenticacao`  
 
 **Estruturas de dados:**  
-- Entidade `Usuario` (armazenamento de dados de login, senha hash, etc.)
+- Entidade `Autenticacao` (armazenamento de dados de login, senha hash, etc.)
 
 **Verificação:**  
 - Testar endpoints:  
@@ -139,7 +138,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
+|RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | Barbara | Rota:  |
 |RF-007| Notificações sobre Pedidos e Atualizações | Matheus Canuto | Rota: /api/notification/sendwelcomeemail e /api/notification/sendstatuspurchase|
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+
 
 
