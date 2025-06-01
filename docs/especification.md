@@ -278,10 +278,6 @@ Esse processo garante um desenvolvimento ágil e eficiente, focado na qualidade 
 
 ## Ferramentas
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.
-
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
-
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-pco-si-2025-1-dad-dad-project-template:master                         |
