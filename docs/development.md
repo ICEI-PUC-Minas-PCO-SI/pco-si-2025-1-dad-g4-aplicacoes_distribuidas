@@ -9,7 +9,21 @@
 
 Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
 
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+ASP.NET Core — framework para criação de APIs RESTful, robusto e de alto desempenho.
+
+✅ C# — linguagem de programação utilizada no desenvolvimento da aplicação.
+
+✅ Entity Framework Core (EF Core) — ORM (Object-Relational Mapper) para mapeamento das entidades e controle do banco de dados via migrations.
+
+✅ PostgreSQL — sistema gerenciador de banco de dados relacional, utilizado para persistência dos dados.
+
+✅ Supabase — plataforma de backend como serviço (BaaS) que hospeda o banco de dados PostgreSQL e oferece ferramentas adicionais.
+
+✅ Swagger / OpenAPI — ferramenta integrada para documentação e teste dos endpoints da API.
+
+✅ .NET CLI — interface de linha de comando para gerenciamento, execução, criação de migrations e atualização do banco.
+
+✅ Npgsql — driver ADO.NET utilizado pelo EF Core para conectar aplicações .NET ao PostgreSQL.
 
 
 ## Programação de Funcionalidades
