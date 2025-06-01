@@ -107,7 +107,7 @@ A aplicação permite que usuários se cadastrem e façam login.
   - `POST /api/autenticacao/login`
 
 ---
-✅ RF-002: CRUD de Produtos
+## ✅ RF-002: CRUD de Produtos
 **Descrição:**
 A aplicação permite criar, ler, atualizar e excluir produtos.
 
