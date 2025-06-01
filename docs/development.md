@@ -84,7 +84,7 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 ## Programação de Funcionalidades
 
-*# Implementação do Sistema
+# Implementação do Sistema
 ---
 
 ## ✅ RF-001: Cadastro e Login de Usuário
