@@ -173,7 +173,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
 |RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | Barbara | Rota:  |
-|RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças | Leni | Rotas: /api/Products (GET, POST), /api/Products/{id} (GET, PUT, DELETE)  |
+|RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças | Leni Rocha | Rotas: /api/Products (GET, POST), /api/Products/{id} (GET, PUT, DELETE)  |
 |RF-007| Notificações sobre Pedidos e Atualizações | Matheus Canuto | Rota: /api/notification/sendwelcomeemail e /api/notification/sendstatuspurchase|
 
 
