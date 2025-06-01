@@ -16,7 +16,6 @@ namespace API.Controllers
             _context = context;
         }
 
-        // ✅ Criar novo pedido
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Order order)
         {
@@ -29,10 +28,9 @@ namespace API.Controllers
             _context.Order.Add(order);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetById), new { id = order.Id }, order);
+            return CreatedAtAction(nameof(GetById), new { orderId = order.Id }, order);
         }
 
-        // ✅ Listar todos os pedidos
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -40,22 +38,20 @@ namespace API.Controllers
             return Ok(orders);
         }
 
-        // ✅ Buscar pedido por ID
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("{orderId}")]
+        public async Task<IActionResult> GetById(int orderId)
         {
-            var order = await _context.Order.FindAsync(id);
+            var order = await _context.Order.FindAsync(orderId);
             if (order == null)
                 return NotFound(new { message = "Pedido não encontrado." });
 
             return Ok(order);
         }
 
-        // ✅ Atualizar status do pedido
-        [HttpPut("{id}/status")]
-        public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
+        [HttpPut("{orderId}/status")]
+        public async Task<IActionResult> UpdateStatus(int orderId, [FromBody] string status)
         {
-            var order = await _context.Order.FindAsync(id);
+            var order = await _context.Order.FindAsync(orderId);
             if (order == null)
                 return NotFound(new { message = "Pedido não encontrado." });
 
