@@ -127,25 +127,19 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
 **Verificação:**
 - Testar endpoints:'
   -`POST /api/Products`
-
-  Criar novo produto.
-
-Validações automáticas via data annotations ([Required], [StringLength], [Range]).
+    -Criar novo produto.
+    -Validações automáticas via data annotations ([Required], [StringLength], [Range]).
 
   -`GET /api/Products`
-
     - Listar todos os produtos.
 
   -`GET /api/Products/{id}`
-
     - Consultar produto pelo ID.
 
   -`PUT /api/Products/{id}`
-
     - Atualizar produto existente.
 
   -`DELETE /api/Products/{id}`
-
     - Remover produto pelo ID.
 
 ---
