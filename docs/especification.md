@@ -142,7 +142,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008| A aplicação deve permitir que os vendedores adicionem imagens e vídeos detalhados dos produtos. | MÉDIA |
 |RF-009| A aplicação deve permitir que compradores solicitem a devolução de um produto dentro de um prazo determinado.  | BAIXA |
 |RF-010| A aplicação deve permitir pagamentos via cartão de crédito, débito, Pix e boleto bancário.  | MÉDIA |
-|RF-007| A aplicação deve permitir que os usuários visualizem o status dos seus pedidos.. | ALTA | 
+|RF-011| A aplicação deve permitir que os usuários visualizem o status dos seus pedidos. | ALTA | 
 
 
 
