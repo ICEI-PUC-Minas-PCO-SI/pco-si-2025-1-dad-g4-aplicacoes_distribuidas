@@ -234,7 +234,7 @@ Atualizado em: 19/03/2025
 
 ### Sprint 2
 
-Atualizado em: 30/05/2025
+Atualizado em: 01/06/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
