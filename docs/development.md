@@ -25,6 +25,10 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 - Npgsql — driver ADO.NET utilizado pelo EF Core para conectar aplicações .NET ao PostgreSQL.
 
+- Git — sistema de controle de versão, essencial para versionamento do código e colaboração entre as equipes.
+
+- Visual Studio Code (VS Code) — ambiente de desenvolvimento (IDE) utilizado para escrever, editar e depurar o código.
+
 
 ## Programação de Funcionalidades
 
