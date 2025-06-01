@@ -1,24 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace Model.Order
 {
     public class Order
     {
-        public int Id { get; set; }
+        [Key]
+        public int OrderId { get; set; }
+
+        [Required]
 
         public string Customer { get; set; }
-        public DateTime Date { get; set; }
+
+        [Required]
+        public DateTime Date { get; set; } = DateTime.Now;
+
+        [Required]
+
         public decimal Total { get; set; }
 
-        public string Status { get; set; }
-        public Order()
-        {
+        [Required]
+        public string Status { get; set; } 
 
-        }
+        public Order() { }
     }
 }
+
