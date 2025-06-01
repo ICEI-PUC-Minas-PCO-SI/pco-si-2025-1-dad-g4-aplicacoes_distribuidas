@@ -1,0 +1,19 @@
+@API_HostAddress = http://localhost:5055
+
+
+### GET - Testar se a API está funcionando
+GET {{API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+### POST - Criar Produto
+POST {{API_HostAddress}}/api/Products
+Content-Type: application/json
+
+{
+  "nome": "Caneca Mágica",
+  "descricao": "Uma caneca que muda de cor",
+  "preco": 29.90,
+  "estoque": 50
+}
