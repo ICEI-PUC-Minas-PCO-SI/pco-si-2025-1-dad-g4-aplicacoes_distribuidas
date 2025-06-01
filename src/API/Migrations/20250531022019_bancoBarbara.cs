@@ -37,25 +37,6 @@ namespace API.Migrations
             migrationBuilder.DropTable(
                 name: "Products");
 
-            migrationBuilder.AddColumn<List<string>>(
-                name: "BlindCarbonCopyRecipients",
-                table: "Notification",
-                type: "text[]",
-                nullable: false);
-
-            migrationBuilder.AddColumn<List<string>>(
-                name: "CarbonCopyRecipients",
-                table: "Notification",
-                type: "text[]",
-                nullable: false);
-
-            migrationBuilder.AddColumn<string>(
-                name: "Status",
-                table: "Notification",
-                type: "text",
-                nullable: false,
-                defaultValue: "");
-
             migrationBuilder.AddColumn<string>(
                 name: "Subject",
                 table: "Notification",
