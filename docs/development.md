@@ -27,7 +27,7 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 - Git — sistema de controle de versão, essencial para versionamento do código e colaboração entre as equipes.
 
-- Visual Studio Code (VS Code) — ambiente de desenvolvimento (IDE) utilizado para escrever, editar e depurar o código.
+- Visual Studio / VS Code — ambiente de desenvolvimento (IDE) utilizado para escrever, editar e depurar o código.
 
 
 ## Programação de Funcionalidades
