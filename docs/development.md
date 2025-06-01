@@ -59,8 +59,6 @@ Este projeto contém as entidades e modelos de domínio. Ele abstrai toda a part
 
 ## Tecnologias Utilizadas
 
-Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
-
 - ASP.NET Core — framework para criação de APIs RESTful, robusto e de alto desempenho.
 
 - C# — linguagem de programação utilizada no desenvolvimento da aplicação.
