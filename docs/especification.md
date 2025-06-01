@@ -293,5 +293,5 @@ Esse processo garante um desenvolvimento ágil e eficiente, focado na qualidade 
 | **Npgsql** | Driver oficial que estabelece a conexão entre o ambiente .NET e o banco de dados PostgreSQL, garantindo compatibilidade e eficiência na comunicação. |
 | **PostgreSQL** | Sistema de banco de dados relacional utilizado para gerenciar informações da API de pagamentos, escolhido pela robustez, confiabilidade e excelente integração com o Supabase. |
 | **Supabase** | Plataforma BaaS usada para hospedar o banco PostgreSQL, oferecendo uma infraestrutura pronta para uso, segurança aprimorada e uma interface administrativa intuitiva. |
-| **Postman / Insomnia ** | Ferramentas para testes manuais da API, verificando o fluxo de dados e a integridade das respostas. Caso alguma delas seja utilizada, é interessante mencionar. |
+| **Postman / Insomnia** | Ferramentas para testes manuais da API, verificando o fluxo de dados e a integridade das respostas. Caso alguma delas seja utilizada, é interessante mencionar. |
 
