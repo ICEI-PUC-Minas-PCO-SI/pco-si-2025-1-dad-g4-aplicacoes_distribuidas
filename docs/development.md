@@ -163,6 +163,33 @@ Usuários recebem notificações importantes.
 - `POST /api/notification/sendwelcomeemail`  
 - `POST /api/notification/sendstatuspurchase`
 ---
+## ✅ RF-011: Visualização de Status dos Pedidos
+
+**Descrição:**  
+A aplicação deve permitir que os usuários visualizem o status dos seus pedidos.
+
+**Artefatos criados:**  
+- **API**  
+  - `Controllers/OrderController.cs`  
+- **Model**  
+  - `Order/Order.cs`  
+
+**Estruturas de dados:**  
+  - Entidade `Order`
+    - OderId: Chave primária.
+    - Customer: Nome do cliente.
+    - Date: Data do pedido.
+    - Total: Valor total do pedido.
+    - Status: Status atual do pedido.
+
+**Verificação:**  
+- Testar endpoints:  
+  - `GET /api/order`  
+    - Deve retornar todos os pedidos existentes, com os respectivos status.
+      
+  - `GET /api/order/{orderId}`
+    - Deve retornar o pedido específico, permitindo visualizar seu status atual.
+  ---
 
 ### Requisitos Atendidos
 
