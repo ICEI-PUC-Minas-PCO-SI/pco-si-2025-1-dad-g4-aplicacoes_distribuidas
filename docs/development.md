@@ -126,6 +126,7 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
     - Estoque: Quantidade em estoque (valor não negativo).
 **Verificação:**
 - Testar endpoints:'
+  
   -`POST /api/Products`
     -Criar novo produto.
     -Validações automáticas via data annotations ([Required], [StringLength], [Range]).
