@@ -13,11 +13,18 @@ namespace Model.Autentication
         public string PasswordHash { get; set; }
         public string Role { get; set; }
 
+        public class ForgotPasswordRequest
+        {
+            public string Username { get; set; }
+        }
+
+
         public Autentication()
         {
 
         }
-     }
+
+    }
 
 }
 
