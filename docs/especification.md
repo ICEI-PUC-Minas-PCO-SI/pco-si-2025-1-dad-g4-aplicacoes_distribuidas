@@ -228,8 +228,8 @@ Atualizado em: 19/03/2025
 | Guilherme        | Introdução e Objetivos |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
 | Matheus        | Histórias de Usuários |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
 | Matheus         | Tecnologias Utilizadas |  19/03/2025     | 19/03/2025 | ✔️    | 19/03/2025      |
-| Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
-| Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
+| Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | ✔️    | 21/03/2025      |
+| Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | ✔️    | 21/03/2025      |
 | Leni        | Restrições  | 21/03/2025     | 22/03/2025 | ✔️    | 21/03/2025      |
 
 ### Sprint 2
@@ -238,13 +238,13 @@ Atualizado em: 30/05/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Matheus Canuto        | CSS unificado    | 03/04/2025    | 10/04/2025 | ✔️   | 12/04/2025                |
-| Bárbara        | API de autenticação/login | 01/04/2024     | 07/04/2024 |✔️   | 20/05/2025                |
-| Leni Rocha       | Catálogo de Produtos  |  01/04/2025    | 30/05/2025 | ✔️|    23/05/2025   |
-| Felipe Fernandes        | Carrinho de Compras  |  01/04/2024    | 12/04/2025 | ✔️    | 10/05/2025      |
-| Guilherme Machado        | Microsserviço de Pagamento  |  28/03/2024    | 12/04/2025 | ✔️    |       |
-| Ana Clara        | Status dos Pedidos  |  28/04/2025    | 20/05/2025 | ✔️   |   /2025    |
-| Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 30/04/2025 | ✔️   | /2025      |
+| Matheus Canuto        | CSS unificado    | 03/04/2025    | 10/05/2025 | ✔️   | 12/04/2025                |
+| Bárbara        | API de autenticação/login | 01/04/2024     | 26/05/2025 |✔️   | 20/05/2025                |
+| Leni Rocha       | Catálogo de Produtos  |  01/04/2025    | 26/05/2025 | ✔️|    23/05/2025   |
+| Felipe Fernandes        | Carrinho de Compras  |  01/04/2024    | 26/05/2025 | ✔️    | 20/05/2025      |
+| Guilherme Machado        | Microsserviço de Pagamento  |  28/03/2024    | 26/05/2025 | ✔️    |       |
+| Ana Clara        | Status dos Pedidos  |  28/04/2025    | 26/05/2025  | ✔️   |     |
+| Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 28/05/2025 | ✔️   | 28/05/2025      |
 | Ana Clara       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
 | Leni Rocha       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
 
