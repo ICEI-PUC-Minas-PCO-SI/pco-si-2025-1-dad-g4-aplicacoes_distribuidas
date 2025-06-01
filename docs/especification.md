@@ -206,8 +206,6 @@ Docker – Para containerização dos microserviços e suas dependências.
 
 ##  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
-
 ### Sprint 1
 - _Scrum master_: Guilherme Henrique de Lima Machado
 - Protótipos: Bárbara Xavier
