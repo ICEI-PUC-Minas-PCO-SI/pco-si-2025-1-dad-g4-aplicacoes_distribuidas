@@ -125,7 +125,7 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
     - Preco: Preço do produto (valor não negativo).
     - Estoque: Quantidade em estoque (valor não negativo).
 **Verificação:**
-- Testar endpoints:'
+- Testar endpoints:
   
   -`POST /api/Products`
     -Criar novo produto.
