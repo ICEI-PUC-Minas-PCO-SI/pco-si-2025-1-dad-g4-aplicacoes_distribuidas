@@ -81,9 +81,6 @@ Tem 32 anos, é gestora de e-commerce e trabalha diretamente na administração 
 4. O Decorador de Luxo – Camila Rios
 Tem 38 anos, é arquiteta e designer de interiores especializada em decoração de alto padrão. Seus clientes buscam peças exclusivas e sofisticadas, e ela sempre está à procura de elementos autênticos para compor seus projetos. Camila valoriza detalhes históricos e a estética refinada dos artefatos antigos, utilizando-os para criar ambientes únicos e sofisticados. Ela precisa de um site que ofereça imagens de alta qualidade e descrições detalhadas, além de um atendimento personalizado para encontrar peças que atendam às necessidades de seus projetos.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
@@ -206,8 +203,6 @@ Docker – Para containerização dos microserviços e suas dependências.
 
 ##  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
-
 ### Sprint 1
 - _Scrum master_: Guilherme Henrique de Lima Machado
 - Protótipos: Bárbara Xavier
@@ -215,18 +210,9 @@ Docker – Para containerização dos microserviços e suas dependências.
 - Documentação: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
 
 ### Sprint 2
-- _Scrum master_: Guilherme Henrique de Lima Machado
-- Desenvolvedor _front-end_: Ana Clara Lima Marçal
-- Desenvolvedor _back-end_: Matheus Henrique Marques Canuto
-- Testes: Leni Rocha
-
-### Sprint 3
-- _Scrum master_: Bárbara Xavier
-- Desenvolvedor _front-end_: Felipe Fernandes
-- Desenvolvedor _back-end_: Guilherme Henrique de Lima Machado
-- Testes: Matheus Henrique Marques Canuto
+- _Scrum master_: Matheus Henrique Marques Canuto
+- Desenvolvedor _back-end_: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
 - Documentação: Ana Clara Lima Marçal, Leni Rocha Bento
-
 
 ##  Quadro de tarefas
 
@@ -242,29 +228,25 @@ Atualizado em: 19/03/2025
 | Guilherme        | Introdução e Objetivos |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
 | Matheus        | Histórias de Usuários |  07/03/2025     | 21/03/2025 | ✔️    | 07/03/2025      |
 | Matheus         | Tecnologias Utilizadas |  19/03/2025     | 19/03/2025 | ✔️    | 19/03/2025      |
-| Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
-| Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | 📝    | /2025      |
+| Ana Clara        | Planejamento do Projeto |  14/03/2025     | 21/03/2025 | ✔️    | 21/03/2025      |
+| Guilherme        | Diagrama da Arquitetura |  14/03/2025     | 21/03/2025 | ✔️    | 21/03/2025      |
 | Leni        | Restrições  | 21/03/2025     | 22/03/2025 | ✔️    | 21/03/2025      |
 
 ### Sprint 2
 
-Atualizado em: 30/05/2025
+Atualizado em: 01/06/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Ana Clara       | Página inicial   | 01/04/2025     | 07/04/2024 | 📝    | 05/04/2025     |
-| Matheus Canuto        | CSS unificado    | 03/04/2025    | 10/04/2025 | 📝    | 12/04/2025                |
-| Bárbara        | Página de login  | 01/04/2024     | 07/04/2024 | 📝     | 20/05/2025                |
-| Felipe Fernandes        | Script de login  |  01/04/2024    | 12/04/2025 | 📝    | 10/05/2025      |
-| Guilherme Machado        | Microsserviço de Pagamento  |  28/03/2024    | 12/04/2025 | 📝    |       |
-| Leni Rocha       | Catálogo de Produtos  |  01/04/2025    | 30/04/2025 | 📝   |    /2025   |
-| Bárbara       | Implementação da API de autenticação   | 15/04/2025     | 22/04/2025 | 📝    | /2025     |
-| Felipe Fernandes        | Validação e testes da API   | 17/04/2025    | 25/04/2025 | 📝    | /2025                |
-| Guilherme        | Integração da API com o front-end | 18/04/2025     | 28/04/2025 | 📝    | /2025                |
-| Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 30/04/2025 | 📝    | /2025      |
-| Leni Rocha       | Testes de Produtos  |  01/04/2025    | 10/05/2025 | 📝   |   /2025    |
-| Ana Clara        | Status dos Pedidos  |  28/04/2025    | 20/05/2025 | 📝   |   /2025    |
-| Leni Rocha       | Verificação da documentação  |  15/05/2025    | 15/06/2025 | 📝   |    /2025   |
+| Matheus Canuto        | CSS unificado    | 03/04/2025    | 10/05/2025 | ✔️   | 12/04/2025                |
+| Bárbara        | API de autenticação/login | 01/04/2024     | 26/05/2025 |✔️   | 20/05/2025                |
+| Leni Rocha       | Catálogo de Produtos  |  01/04/2025    | 26/05/2025 | ✔️|    23/05/2025   |
+| Felipe Fernandes        | Carrinho de Compras  |  01/04/2024    | 26/05/2025 | ✔️    | 24/05/2025      |
+| Guilherme Machado        | Microsserviço de Pagamento  |  28/03/2024    | 26/05/2025 | ✔️    |  16/05/2025     |
+| Ana Clara        | Status dos Pedidos  |  28/04/2025    | 26/05/2025  | ✔️   | 24/05/2025    |
+| Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 28/05/2025 | ✔️   | 28/05/2025      |
+| Ana Clara       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
+| Leni Rocha       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
 
 Legenda:
 - ✔️: terminado
@@ -291,12 +273,21 @@ Esse processo garante um desenvolvimento ágil e eficiente, focado na qualidade 
 
 ## Ferramentas
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.
-
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+## Ferramentas
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-pco-si-2025-1-dad-dad-project-template:master                         |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g4-aplicacoes_distribuidas/tree/master/docs)                        |
- 
+
+| Ferramenta | Função Principal / Motivação |
+|------------|------------------------------|
+| **Visual Studio Code (VS Code)** | Editor de código escolhido por ser leve e altamente personalizável por meio de extensões. Oferece suporte avançado para C# e ASP.NET Core, além de contar com recursos como depuração, integração com Git e um terminal embutido. |
+| **Git** | Sistema de controle de versão que possibilita o trabalho colaborativo de forma organizada, permitindo acompanhar e gerenciar as alterações realizadas no código. |
+| **.NET CLI** | Ferramenta oficial do .NET para criação, execução e gerenciamento de projetos, incluindo administração de pacotes e comandos essenciais como migrations e atualizações do banco de dados. |
+| **Swagger / OpenAPI** | Tecnologia utilizada para gerar automaticamente documentação interativa da API, facilitando os testes e a integração com outros sistemas que a utilizam. |
+| **Entity Framework Core (EF Core)** | Framework ORM que simplifica a comunicação entre o código e o banco de dados, automatizando a criação e alteração da estrutura por meio de migrations. |
+| **Npgsql** | Driver oficial que estabelece a conexão entre o ambiente .NET e o banco de dados PostgreSQL, garantindo compatibilidade e eficiência na comunicação. |
+| **PostgreSQL** | Sistema de banco de dados relacional utilizado para gerenciar informações da API de pagamentos, escolhido pela robustez, confiabilidade e excelente integração com o Supabase. |
+| **Supabase** | Plataforma BaaS usada para hospedar o banco PostgreSQL, oferecendo uma infraestrutura pronta para uso, segurança aprimorada e uma interface administrativa intuitiva. |
+| **Postman / Insomnia** | Ferramentas para testes manuais da API, verificando o fluxo de dados e a integridade das respostas. Caso alguma delas seja utilizada, é interessante mencionar. |
