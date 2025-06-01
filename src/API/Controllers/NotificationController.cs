@@ -3,6 +3,7 @@ using MailKit.Net.Smtp;
 using MimeKit;
 using API.Data;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Model.Notification;
 using Microsoft.Extensions.Options;
 using API.Service;
@@ -11,12 +12,19 @@ using Model;
 using API.ViewModel;
 =======
 using System.Reflection;
+=======
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
 using Model.Notification;
 using Microsoft.Extensions.Options;
-using Org.BouncyCastle.Asn1.Ocsp;
 using API.Service;
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 >>>>>>> 6f91623 (send email)
+=======
+using Model.Order;
+using Model;
+using API.ViewModel;
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
 
 namespace API.Controllers
 {
@@ -36,6 +44,7 @@ namespace API.Controllers
 
         [HttpPost]
 <<<<<<< HEAD
+<<<<<<< HEAD
         [Route("sendwelcomeemail")]
         public async Task<ActionResult<Notification>> SendWelcomeEmail(Notification model)
         {
@@ -44,10 +53,14 @@ namespace API.Controllers
                 EmailService.SendEmail(model, _emailSettings);
 =======
         public async Task<ActionResult<Notification>> SendEmail(Notification model)
+=======
+        [Route("sendwelcomeemail")]
+        public async Task<ActionResult<Notification>> SendWelcomeEmail(Notification model)
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
         {
-
             try
             {
+<<<<<<< HEAD
                 // Mockandos os dados se não tiver paramêtro
                 if (String.IsNullOrEmpty(model.ClientName) || model.ClientName == "string")
                 {
@@ -82,16 +95,22 @@ namespace API.Controllers
                 }
 
 >>>>>>> 6f91623 (send email)
+=======
+                EmailService.SendEmail(model, _emailSettings);
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
             }
             catch (Exception ex)
             {
                 return StatusCode(500, "Falha ao enviar e-mail.");
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 6f91623 (send email)
+=======
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
             Notification n = new Notification
             {
                 Recipient = model.Recipient,

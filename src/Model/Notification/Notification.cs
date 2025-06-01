@@ -5,7 +5,6 @@ public class Notification
 {
     public int Id { get; set; }
     public string Recipient { get; set; }
-    public string ClientName { get; set; }
     public string Sender { get; set; }
     public string Body { get; set; }
     public DateTime? SentAt { get; set; }
@@ -16,9 +15,13 @@ public class Notification
     public string ErrorMessage { get; set; }
     public string cupomDeDesconto { get; set; }
 <<<<<<< HEAD
+<<<<<<< HEAD
     public string Status { get; set; }
 =======
 >>>>>>> 6f91623 (send email)
+=======
+    public string Status { get; set; }
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
     public Notification()
     {
 

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
 using Microsoft.AspNetCore.Mvc;
@@ -7,20 +10,27 @@ using Model.Notification;
 using Model.Order;
 using Model;
 using API.ViewModel;
+<<<<<<< HEAD
 =======
 ﻿using RazorLight;
 using static System.Net.WebRequestMethods;
 >>>>>>> 6f91623 (send email)
+=======
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
 
 namespace API.Service
 {
     public static class EmailService
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static string WelcomeEmailTemplate(string nomeCliente, string codigoCupom)
 =======
         public static string WelcomeEmail(string nomeCliente, string codigoCupom)
 >>>>>>> 6f91623 (send email)
+=======
+        public static string WelcomeEmailTemplate(string nomeCliente, string codigoCupom)
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
         {
             return $@"
         <!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">
@@ -44,11 +54,16 @@ namespace API.Service
                 }}
                 .header {{
 <<<<<<< HEAD
+<<<<<<< HEAD
                     color: white;
                     background-color: #8b4513;
 =======
                     background-color: #2c3e50;
 >>>>>>> 6f91623 (send email)
+=======
+                    color: white;
+                    background-color: #8b4513;
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
                     padding: 20px;
                     text-align: center;
                 }}
@@ -58,10 +73,14 @@ namespace API.Service
                 }}
                 .coupon {{
 <<<<<<< HEAD
+<<<<<<< HEAD
                     background-color: #f8f1e5;
 =======
                     background-color: #f39c12;
 >>>>>>> 6f91623 (send email)
+=======
+                    background-color: #f8f1e5;
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
                     padding: 15px;
                     text-align: center;
                     margin: 20px 0;
@@ -77,12 +96,17 @@ namespace API.Service
                 .button {{
                     display: inline-block;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     background-color: #f8f1e5;
                     color: white;
 =======
                     background-color: #2c3e50;
                     color: #ffffff;
 >>>>>>> 6f91623 (send email)
+=======
+                    background-color: #f8f1e5;
+                    color: white;
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
                     padding: 10px 20px;
                     text-decoration: none;
                     border-radius: 4px;
@@ -128,6 +152,9 @@ namespace API.Service
         </html>";
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
         public static string OrderStatusTemplate(NotificationViewModel notificationViewModel)
         {
             return @$"
@@ -350,7 +377,10 @@ namespace API.Service
                 await client.DisconnectAsync(true);
             }
         }
+<<<<<<< HEAD
 =======
 >>>>>>> 6f91623 (send email)
+=======
+>>>>>>> 6c2bb15 (metodos sendstatuspurchase e SendWelcomeEmail)
     }
 }
