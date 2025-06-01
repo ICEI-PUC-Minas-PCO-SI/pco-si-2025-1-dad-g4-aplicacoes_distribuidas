@@ -14,14 +14,22 @@ namespace API.Migrations
                 name: "ClientName",
                 table: "Notification",
                 type: "text",
+<<<<<<< HEAD
                 nullable: true,
+=======
+                nullable: false,
+>>>>>>> 6f91623 (send email)
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "cupomDeDesconto",
                 table: "Notification",
                 type: "text",
+<<<<<<< HEAD
                 nullable: true,
+=======
+                nullable: false,
+>>>>>>> 6f91623 (send email)
                 defaultValue: "");
         }
 

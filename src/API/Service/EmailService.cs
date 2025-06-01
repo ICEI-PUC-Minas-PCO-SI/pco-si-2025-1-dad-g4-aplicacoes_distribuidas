@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
 using Microsoft.AspNetCore.Mvc;
@@ -6,12 +7,20 @@ using Model.Notification;
 using Model.Order;
 using Model;
 using API.ViewModel;
+=======
+﻿using RazorLight;
+using static System.Net.WebRequestMethods;
+>>>>>>> 6f91623 (send email)
 
 namespace API.Service
 {
     public static class EmailService
     {
+<<<<<<< HEAD
         public static string WelcomeEmailTemplate(string nomeCliente, string codigoCupom)
+=======
+        public static string WelcomeEmail(string nomeCliente, string codigoCupom)
+>>>>>>> 6f91623 (send email)
         {
             return $@"
         <!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">
@@ -34,8 +43,12 @@ namespace API.Service
                     padding: 20px;
                 }}
                 .header {{
+<<<<<<< HEAD
                     color: white;
                     background-color: #8b4513;
+=======
+                    background-color: #2c3e50;
+>>>>>>> 6f91623 (send email)
                     padding: 20px;
                     text-align: center;
                 }}
@@ -44,7 +57,11 @@ namespace API.Service
                     margin: 0;
                 }}
                 .coupon {{
+<<<<<<< HEAD
                     background-color: #f8f1e5;
+=======
+                    background-color: #f39c12;
+>>>>>>> 6f91623 (send email)
                     padding: 15px;
                     text-align: center;
                     margin: 20px 0;
@@ -59,8 +76,13 @@ namespace API.Service
                 }}
                 .button {{
                     display: inline-block;
+<<<<<<< HEAD
                     background-color: #f8f1e5;
                     color: white;
+=======
+                    background-color: #2c3e50;
+                    color: #ffffff;
+>>>>>>> 6f91623 (send email)
                     padding: 10px 20px;
                     text-decoration: none;
                     border-radius: 4px;
@@ -105,6 +127,7 @@ namespace API.Service
         </body>
         </html>";
         }
+<<<<<<< HEAD
         public static string OrderStatusTemplate(NotificationViewModel notificationViewModel)
         {
             return @$"
@@ -327,5 +350,7 @@ namespace API.Service
                 await client.DisconnectAsync(true);
             }
         }
+=======
+>>>>>>> 6f91623 (send email)
     }
 }
