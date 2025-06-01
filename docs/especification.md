@@ -215,10 +215,9 @@ Docker – Para containerização dos microserviços e suas dependências.
 - Documentação: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
 
 ### Sprint 2
-- _Scrum master_: Guilherme Henrique de Lima Machado
-- Desenvolvedor _front-end_: Ana Clara Lima Marçal
-- Desenvolvedor _back-end_: Matheus Henrique Marques Canuto
-- Testes: Leni Rocha
+- _Scrum master_: Matheus Henrique Marques Canuto
+- Desenvolvedor _back-end_: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
+- Documentação: Ana Clara Lima Marçal, Leni Rocha Bento
 
 ### Sprint 3
 - _Scrum master_: Bárbara Xavier
