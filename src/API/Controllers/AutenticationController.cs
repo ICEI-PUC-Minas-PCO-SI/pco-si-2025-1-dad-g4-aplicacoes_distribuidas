@@ -18,7 +18,7 @@ namespace API.Controllers
             _context = context;
         }
 
-        // ✅ Cadastrar usuário
+        // Cadastro de usuário
         [HttpPost]
         public async Task<ActionResult> Cadastro(Autentication model)
         {
@@ -43,7 +43,7 @@ namespace API.Controllers
         }
 
 
-        // ✅ Buscar usuário por ID
+        // Buscar usuário por ID
         [HttpGet("{id}")]
         public async Task<ActionResult<Autentication>> GetById(int id)
         {
@@ -51,11 +51,11 @@ namespace API.Controllers
             if (user == null)
                 return NotFound("Usuário não encontrado");
 
-            user.PasswordHash = null; // Não retorna a senha
+            user.PasswordHash = null; // Não mostra a senha por segurança
             return Ok(user);
         }
 
-        // ✅ Atualizar dados do usuário
+        // Atualiza dados do usuário
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] Autentication updateModel)
         {
@@ -75,7 +75,6 @@ namespace API.Controllers
                 user.PasswordHash = hasher.HashPassword(user, updateModel.PasswordHash);
             }
 
-            // 🔥 Essa linha garante que o EF está rastreando as mudanças
             _context.Entry(user).State = EntityState.Modified;
 
             await _context.SaveChangesAsync();
@@ -84,10 +83,7 @@ namespace API.Controllers
         }
 
 
-
-
-
-        // ✅ Login
+        // Login
         [HttpPost("login")]
         public async Task<ActionResult> Login([FromBody] Autentication login)
         {
@@ -112,9 +108,7 @@ namespace API.Controllers
         }
 
 
-
-        // ✅ Esqueci minha senha
-        // ✅ Esqueci minha senha
+        // Esqueci minha senha
         [HttpPost("forgot-password")]
         public async Task<ActionResult> ForgotPassword([FromBody] string username)
         {
@@ -122,7 +116,7 @@ namespace API.Controllers
             if (user == null)
                 return NotFound("Usuário não encontrado");
 
-            // Gera uma nova senha temporária
+            // Gera uma nova senha temporária aleatória
             string novaSenha = Guid.NewGuid().ToString().Substring(0, 8);
 
             var hasher = new PasswordHasher<Autentication>();
@@ -130,13 +124,12 @@ namespace API.Controllers
 
             await _context.SaveChangesAsync();
 
-            // Em sistemas reais, essa senha seria enviada por e-mail.
-            return Ok($"Nova senha gerada: {novaSenha}");
+            return Ok($"Nova senha gerada: {novaSenha}. Não esqueça de atualizar para uma senha do seu interesse mais tarde");
         }
 
 
 
-        // ✅ Deletar usuário por ID
+        // Deleta usuário pelo ID
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeletarUsuario(int id)
         {
