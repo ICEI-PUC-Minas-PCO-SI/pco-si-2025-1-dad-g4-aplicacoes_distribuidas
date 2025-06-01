@@ -286,4 +286,21 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-pco-si-2025-1-dad-dad-project-template:master                         |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g4-aplicacoes_distribuidas/tree/master/docs)                        |
+
+Aqui está a tabela reescrita com outras palavras:
+
+| Ferramenta | Função Principal / Motivação |
+|------------|------------------------------|
+| **Visual Studio Code (VS Code)** | Editor de código escolhido por ser leve e altamente personalizável por meio de extensões. Oferece suporte avançado para C# e ASP.NET Core, além de contar com recursos como depuração, integração com Git e um terminal embutido. |
+| **Git** | Sistema de controle de versão que possibilita o trabalho colaborativo de forma organizada, permitindo acompanhar e gerenciar as alterações realizadas no código. |
+| **GitHub / GitLab / Bitbucket (se aplicável)** | Serviços online para armazenar repositórios Git, facilitando a colaboração, revisão de código e integração contínua. Importante indicar qual plataforma está sendo usada. |
+| **.NET CLI** | Ferramenta oficial do .NET para criação, execução e gerenciamento de projetos, incluindo administração de pacotes e comandos essenciais como migrations e atualizações do banco de dados. |
+| **Swagger / OpenAPI** | Tecnologia utilizada para gerar automaticamente documentação interativa da API, facilitando os testes e a integração com outros sistemas que a utilizam. |
+| **Entity Framework Core (EF Core)** | Framework ORM que simplifica a comunicação entre o código e o banco de dados, automatizando a criação e alteração da estrutura por meio de migrations. |
+| **Npgsql** | Driver oficial que estabelece a conexão entre o ambiente .NET e o banco de dados PostgreSQL, garantindo compatibilidade e eficiência na comunicação. |
+| **PostgreSQL** | Sistema de banco de dados relacional utilizado para gerenciar informações da API de pagamentos, escolhido pela robustez, confiabilidade e excelente integração com o Supabase. |
+| **Supabase** | Plataforma BaaS usada para hospedar o banco PostgreSQL, oferecendo uma infraestrutura pronta para uso, segurança aprimorada e uma interface administrativa intuitiva. |
+| **Postman / Insomnia (se aplicável)** | Ferramentas para testes manuais da API, verificando o fluxo de dados e a integridade das respostas. Caso alguma delas seja utilizada, é interessante mencionar. |
+
+Espero que essa versão reformulada seja útil para você. Se precisar de ajustes, me avise! 🚀
  
