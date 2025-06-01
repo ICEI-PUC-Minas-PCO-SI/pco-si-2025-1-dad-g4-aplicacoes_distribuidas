@@ -287,8 +287,6 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Repositório de código fonte         | GitHub                             | ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-pco-si-2025-1-dad-dad-project-template:master                         |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g4-aplicacoes_distribuidas/tree/master/docs)                        |
 
-Aqui está a tabela reescrita com outras palavras:
-
 | Ferramenta | Função Principal / Motivação |
 |------------|------------------------------|
 | **Visual Studio Code (VS Code)** | Editor de código escolhido por ser leve e altamente personalizável por meio de extensões. Oferece suporte avançado para C# e ASP.NET Core, além de contar com recursos como depuração, integração com Git e um terminal embutido. |
@@ -301,5 +299,3 @@ Aqui está a tabela reescrita com outras palavras:
 | **Supabase** | Plataforma BaaS usada para hospedar o banco PostgreSQL, oferecendo uma infraestrutura pronta para uso, segurança aprimorada e uma interface administrativa intuitiva. |
 | **Postman / Insomnia ** | Ferramentas para testes manuais da API, verificando o fluxo de dados e a integridade das respostas. Caso alguma delas seja utilizada, é interessante mencionar. |
 
-Espero que essa versão reformulada seja útil para você. Se precisar de ajustes, me avise! 🚀
- 
