@@ -107,7 +107,48 @@ A aplicação permite que usuários se cadastrem e façam login.
   - `POST /api/autenticacao/login`
 
 ---
+✅ RF-002: CRUD de Produtos
+**Descrição:**
+A aplicação permite criar, ler, atualizar e excluir produtos.
 
+**Artefatos criados:**  
+- **API** 
+   - `Controllers/ProductsController.cs`
+- **Model**  
+  - `Model.Products.Products.cs`
+
+**Estruturas de dados:** 
+  - Entidade `Products`
+    - Id: Identificador único do produto.
+    - Nome: Nome do produto (obrigatório, até 100 caracteres).
+    - escricao: Descrição do produto (até 500 caracteres).
+    - Preco: Preço do produto (valor não negativo).
+    - Estoque: Quantidade em estoque (valor não negativo).
+**Verificação:**
+- Testar endpoints:'
+  -`POST /api/Products`
+
+  Criar novo produto.
+
+Validações automáticas via data annotations ([Required], [StringLength], [Range]).
+
+  -`GET /api/Products`
+
+    - Listar todos os produtos.
+
+  -`GET /api/Products/{id}`
+
+    - Consultar produto pelo ID.
+
+  -`PUT /api/Products/{id}`
+
+    - Atualizar produto existente.
+
+  -`DELETE /api/Products/{id}`
+
+    - Remover produto pelo ID.
+
+---
 ## ✅ RF-007: Notificações sobre Pedidos e Atualizações
 
 **Descrição:**  
