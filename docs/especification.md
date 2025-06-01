@@ -81,9 +81,6 @@ Tem 32 anos, é gestora de e-commerce e trabalha diretamente na administração 
 4. O Decorador de Luxo – Camila Rios
 Tem 38 anos, é arquiteta e designer de interiores especializada em decoração de alto padrão. Seus clientes buscam peças exclusivas e sofisticadas, e ela sempre está à procura de elementos autênticos para compor seus projetos. Camila valoriza detalhes históricos e a estética refinada dos artefatos antigos, utilizando-os para criar ambientes únicos e sofisticados. Ela precisa de um site que ofereça imagens de alta qualidade e descrições detalhadas, além de um atendimento personalizado para encontrar peças que atendam às necessidades de seus projetos.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
