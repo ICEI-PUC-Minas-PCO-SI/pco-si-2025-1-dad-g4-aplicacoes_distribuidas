@@ -142,7 +142,7 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
     - Remover produto pelo ID.
  
 ---
-✅ RF-005: Cadastro de Pagamento
+## ✅ RF-005: Cadastro de Pagamento
 
 Descrição:
 A aplicação permite que seja realizado o cadastro de um novo pagamento. Todo pagamento criado inicia com o status "Pending".
@@ -212,7 +212,7 @@ Usuários recebem notificações importantes.
 - `POST /api/notification/sendwelcomeemail`  
 - `POST /api/notification/sendstatuspurchase`
 ---
-✅ RF-010: Consulta de Pagamento por ID
+## ✅ RF-010: Consulta de Pagamento por ID
 
 Descrição:
 A aplicação permite consultar um pagamento específico a partir do seu identificador único (ID).
