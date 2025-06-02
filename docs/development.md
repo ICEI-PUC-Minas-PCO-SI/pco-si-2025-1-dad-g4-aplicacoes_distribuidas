@@ -140,6 +140,55 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
 
   -`DELETE /api/Products/{id}`
     - Remover produto pelo ID.
+ 
+---
+✅ RF-005: Cadastro de Pagamento
+
+Descrição:
+A aplicação permite que seja realizado o cadastro de um novo pagamento. Todo pagamento criado inicia com o status "Pending".
+
+Artefatos criados:
+
+API
+Controllers/PaymentsController.cs
+
+Model
+Payments
+
+Estruturas de dados:
+
+Entidade Payments
+
+Id (int): identificador único do pagamento.
+
+OrderId (int): identificador do pedido relacionado ao pagamento.
+
+Amount (decimal): valor a ser pago.
+
+PaymentMethod (string): método de pagamento, como "CreditCard", "Pix", ou "Boleto".
+
+Status (string): status atual do pagamento, iniciado como "Pending".
+
+CreatedAt (DateTime): data e hora em que o pagamento foi criado.
+
+PaidAt (DateTime?): data e hora em que o pagamento foi efetuado, se aplicável.
+
+Verificação:
+
+Testar endpoint:
+
+POST /api/payments
+Fluxo esperado:
+
+Recebe um objeto Payments no corpo da requisição.
+
+Define automaticamente o status como "Pending".
+
+Persiste o pagamento no banco de dados.
+
+Retorna 201 Created com a localização do recurso criado.
+
+
 
 ---
 ## ✅ RF-007: Notificações sobre Pedidos e Atualizações
@@ -162,6 +211,37 @@ Usuários recebem notificações importantes.
   
 - `POST /api/notification/sendwelcomeemail`  
 - `POST /api/notification/sendstatuspurchase`
+---
+✅ RF-010: Consulta de Pagamento por ID
+
+Descrição:
+A aplicação permite consultar um pagamento específico a partir do seu identificador único (ID).
+
+Artefatos criados:
+
+API
+Controllers/PaymentsController.cs
+
+Model
+Payments
+
+Estruturas de dados:
+
+Entidade Payments (mesma estrutura definida no RF-001).
+
+Verificação:
+
+Testar endpoint:
+
+GET /api/payments/{id}
+Fluxo esperado:
+
+Consulta o pagamento com base no ID fornecido.
+
+Se encontrado, retorna 200 OK com os dados do pagamento.
+
+Se não encontrado, retorna 404 Not Found.
+
 ---
 ## ✅ RF-011: Visualização de Status dos Pedidos
 
