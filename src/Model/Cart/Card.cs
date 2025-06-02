@@ -6,47 +6,58 @@ namespace Model.Cart
 {
     public class Cart
     {
-        public List<CartItem> Items { get; } = new List<CartItem>();
+        private readonly List<CartItem> _items = new List<CartItem>();
+
+        // Versão simplificada do item do carrinho
+        public class CartItem
+        {
+            public int ProdutoId { get; set; }
+            public string Nome { get; set; }
+            public decimal Preco { get; set; }
+            public int Quantidade { get; set; }
+        }
 
         // Adiciona ou atualiza item no carrinho
-        public void AddItem(int productId, string name, decimal price, int quantity = 1)
+        public void AdicionarItem(CartItem item)
         {
-            var item = Items.FirstOrDefault(i => i.ProductId == productId);
+            var existente = _items.FirstOrDefault(i => i.ProdutoId == item.ProdutoId);
 
-            if (item != null)
+            if (existente != null)
             {
-                item.Quantity += quantity;
+                existente.Quantidade += item.Quantidade;
             }
             else
             {
-                Items.Add(new CartItem
-                {
-                    ProductId = productId,
-                    ProductName = name,
-                    Price = price,
-                    Quantity = quantity
-                });
+                _items.Add(item);
             }
         }
 
         // Remove item do carrinho
-        public void RemoveItem(int productId)
+        public void RemoverItem(int produtoId)
         {
-            Items.RemoveAll(i => i.ProductId == productId);
+            _items.RemoveAll(i => i.ProdutoId == produtoId);
         }
 
+        // Atualiza quantidade de um item
+        public void AtualizarQuantidade(int produtoId, int novaQuantidade)
+        {
+            var item = _items.FirstOrDefault(i => i.ProdutoId == produtoId);
+            if (item != null)
+            {
+                item.Quantidade = novaQuantidade;
+            }
+        }
+
+        // Obtém todos os itens do carrinho
+        public List<CartItem> ObterItens() => _items.ToList();
+
+        // Calcula o total de itens
+        public int TotalItens => _items.Sum(i => i.Quantidade);
+
+        // Calcula o valor total
+        public decimal ValorTotal => _items.Sum(i => i.Preco * i.Quantidade);
+
         // Limpa todo o carrinho
-        public void Clear() => Items.Clear();
-
-        // Calcula o total
-        public decimal Total => Items.Sum(i => i.Price * i.Quantity);
-    }
-
-    public class CartItem
-    {
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public decimal Price { get; set; }
-        public int Quantity { get; set; } = 1;
+        public void Limpar() => _items.Clear();
     }
 }
