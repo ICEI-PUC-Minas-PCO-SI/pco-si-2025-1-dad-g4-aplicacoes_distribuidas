@@ -142,51 +142,57 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
     - Remover produto pelo ID.
  
 ---
+Perfeito! Agora entendi o que quer: **um texto "cru", puro, exatamente com as mesmas quebras de linha, espaçamento e caracteres**, para que, ao colar no Markdown (`.md`) do GitHub, fique **idêntico** ao modelo.
+
+Aqui está a versão pronta, formatada **EXATAMENTE** como o exemplo que enviou:
+
+---
+
 ## ✅ RF-005: Cadastro de Pagamento
 
-Descrição:
+**Descrição:**
 A aplicação permite que seja realizado o cadastro de um novo pagamento. Todo pagamento criado inicia com o status "Pending".
 
-Artefatos criados:
+**Artefatos criados:**
 
-API
-Controllers/PaymentsController.cs
+* **API**
 
-Model
-Payments
+  * `Controllers/PaymentsController.cs`
+* **Model**
 
-Estruturas de dados:
+  * `Payments`
 
-Entidade Payments
+**Estruturas de dados:**
 
-Id (int): identificador único do pagamento.
+* Entidade `Payments`
 
-OrderId (int): identificador do pedido relacionado ao pagamento.
+  * `Id (int)`: identificador único do pagamento.
+  * `OrderId (int)`: identificador do pedido relacionado ao pagamento.
+  * `Amount (decimal)`: valor a ser pago.
+  * `PaymentMethod (string)`: método de pagamento, como "CreditCard", "Pix", ou "Boleto".
+  * `Status (string)`: status atual do pagamento, iniciado como "Pending".
+  * `CreatedAt (DateTime)`: data e hora em que o pagamento foi criado.
+  * `PaidAt (DateTime?)`: data e hora em que o pagamento foi efetuado, se aplicável.
 
-Amount (decimal): valor a ser pago.
+**Verificação:**
 
-PaymentMethod (string): método de pagamento, como "CreditCard", "Pix", ou "Boleto".
+* Testar endpoint:
 
-Status (string): status atual do pagamento, iniciado como "Pending".
+  * `POST /api/payments`
+* Fluxo esperado:
 
-CreatedAt (DateTime): data e hora em que o pagamento foi criado.
+  * Recebe um objeto `Payments` no corpo da requisição.
+  * Define automaticamente o status como "Pending".
+  * Persiste o pagamento no banco de dados.
+  * Retorna `201 Created` com a localização do recurso criado.
 
-PaidAt (DateTime?): data e hora em que o pagamento foi efetuado, se aplicável.
 
-Verificação:
 
-Testar endpoint:
+---
 
-POST /api/payments
-Fluxo esperado:
+Pode copiar exatamente esse texto e colar no Markdown, que ficará idêntico ao modelo que enviou.
+Se quiser, posso também preparar os outros requisitos nesse mesmo padrão. Quer que eu faça?
 
-Recebe um objeto Payments no corpo da requisição.
-
-Define automaticamente o status como "Pending".
-
-Persiste o pagamento no banco de dados.
-
-Retorna 201 Created com a localização do recurso criado.
 
 
 
@@ -214,34 +220,32 @@ Usuários recebem notificações importantes.
 ---
 ## ✅ RF-010: Consulta de Pagamento por ID
 
-Descrição:
+**Descrição:**
 A aplicação permite consultar um pagamento específico a partir do seu identificador único (ID).
 
-Artefatos criados:
+**Artefatos criados:**
 
-API
-Controllers/PaymentsController.cs
+* **API**
 
-Model
-Payments
+  * `Controllers/PaymentsController.cs`
+* **Model**
 
-Estruturas de dados:
+  * `Payments`
 
-Entidade Payments (mesma estrutura definida no RF-001).
+**Estruturas de dados:**
 
-Verificação:
+* Entidade `Payments` (mesma estrutura definida no RF-005).
 
-Testar endpoint:
+**Verificação:**
 
-GET /api/payments/{id}
-Fluxo esperado:
+* Testar endpoint:
 
-Consulta o pagamento com base no ID fornecido.
+  * `GET /api/payments/{id}`
+* Fluxo esperado:
 
-Se encontrado, retorna 200 OK com os dados do pagamento.
-
-Se não encontrado, retorna 404 Not Found.
-
+  * Consulta o pagamento com base no ID fornecido.
+  * Se encontrado, retorna `200 OK` com os dados do pagamento.
+  * Se não encontrado, retorna `404 Not Found`.
 ---
 ## ✅ RF-011: Visualização de Status dos Pedidos
 
