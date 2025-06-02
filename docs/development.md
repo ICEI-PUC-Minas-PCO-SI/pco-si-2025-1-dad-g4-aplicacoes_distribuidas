@@ -2,6 +2,8 @@
 # Desenvolvimento da Aplicação
 
 ## Modelagem da Aplicação
+![Arquitetura da solução](img/imgs/supabase-schema-abpeystmoewjrhqyiytp.png)
+
 # Estrutura da Aplicação
 
 A aplicação é separada em 2 projetos:
