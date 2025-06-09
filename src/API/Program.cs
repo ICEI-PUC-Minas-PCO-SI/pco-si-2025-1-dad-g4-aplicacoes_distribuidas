@@ -1,7 +1,10 @@
 using API.Data;
 using Microsoft.EntityFrameworkCore;
+using Model.Notification;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
