@@ -6,6 +6,11 @@ using System.Linq;
 using API.Data;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Model.Notification;
+using Microsoft.Extensions.Options;
+using API.Service;
+using API.ViewModel;
+using Model;
 
 namespace API.Controllers
 {
@@ -14,17 +19,38 @@ namespace API.Controllers
     public class PaymentsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly EmailSettings _emailSettings;
 
-        public PaymentsController(ApplicationDbContext context)
+        public PaymentsController(ApplicationDbContext context,
+            IOptions<EmailSettings> emailSettings
+            )
         {
             _context = context;
+            _emailSettings = emailSettings.Value;
         }
 
         // CREATE
         [HttpPost]
         public async Task<ActionResult<Payments>> CreatePayment(Payments payment)
         {
-            payment.Status = "Pending";
+            payment.Status = DefaultValues.StatusPedido.Pendente;
+
+            try
+            {
+                // Um payment tem uma order e uma ordem tem um id usuário
+                var user = await OrderService.GetUserNameById(payment.OrderId, _context);
+                NotificationViewModel notificationViewModel = new NotificationViewModel
+                {
+                    Customer = user,
+                    Sender = "atendimento@puroosso.com",
+                    Status = payment.Status,
+                };
+                EmailService.SendStatusEmail(notificationViewModel, _emailSettings);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
 
@@ -73,13 +99,45 @@ namespace API.Controllers
             payment.Status = updatedPayment.Status;
             payment.PaidAt = updatedPayment.PaidAt;
 
+            var user = await OrderService.GetUserNameById(payment.OrderId, _context);
+            NotificationViewModel notificationViewModel = new NotificationViewModel
+            {
+                Customer = user,
+                Sender = "atendimento@puroosso.com",
+                Status = payment.Status,
+            };
+
+            try
+            {
+                EmailService.SendStatusEmail(notificationViewModel, _emailSettings);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
+            Notification n = new Notification
+            {
+                Recipient = notificationViewModel.Recipient,
+                Sender = "atendimento@puroosso.com",
+                Body = "SendStatusPurchase",
+                SentAt = DateTime.Now,
+                CreatedAt = DateTime.Now,
+                Priority = "Alta",
+                Retries = 0,
+                cupomDeDesconto = "BONE-15",
+                Status = notificationViewModel.Status
+            };
+
+            _context.Notification.Add(n);
+
             _context.Entry(payment).State = EntityState.Modified;
 
             try
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
                 if (!PaymentExists(id))
                 {
@@ -87,7 +145,7 @@ namespace API.Controllers
                 }
                 else
                 {
-                    throw;
+                    return StatusCode(500, ex.Message);
                 }
             }
 

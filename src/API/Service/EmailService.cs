@@ -241,6 +241,11 @@ namespace API.Service
                                 {(notificationViewModel.Status == DefaultValues.StatusPedido.EmRotaDeEntrega ? $"<p><strong>Previsão de entrega:</strong> {notificationViewModel.previsaoEntrega}</p>" : "")}
                                 {(notificationViewModel.Status == DefaultValues.StatusPedido.Concluido ? $"<p><strong>Pedido concludo!" : "")}
                             </div>
+
+                            <div>
+                                <h2>Metodo de pagamento:</h2>
+                                <p>{(String.IsNullOrEmpty(notificationViewModel.metodoDePagamento) ? notificationViewModel.metodoDePagamento : "")} ? </p>
+                            </div>
             
                             <div style=""text-align: center;"">
                                 <a href=""#"" class=""button"">Acompanhar Pedido</a>

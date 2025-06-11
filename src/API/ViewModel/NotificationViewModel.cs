@@ -18,7 +18,7 @@
         public decimal Total { get; set; }
         public string Status { get; set; }
         public string previsaoEntrega { get; set; }
-
+        public string? metodoDePagamento { get; set; }
 
     }
 }

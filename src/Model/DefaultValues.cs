@@ -11,6 +11,7 @@ namespace Model
             public static string EmRotaDeEntrega = "EmRotaDeEntrega";
             public static string Concluido = "Concluido";
             public static string PedidoCancelado = "Cancelado";
+            public static string Pendente = "Pendente";
         }
             
     }

@@ -35,7 +35,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Falha ao enviar e-mail.");
+                return StatusCode(500, ex.Message);
             }
             Notification n = new Notification
             {
@@ -64,7 +64,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Falha ao enviar e-mail.");
+                return StatusCode(500, ex.Message);
             }
 
             Notification n = new Notification
@@ -79,7 +79,7 @@ namespace API.Controllers
                 cupomDeDesconto = "BONE-15",
                 Status = notificationViewModel.Status
             };
-            _context.Add(n);
+            _context.Notification.Add(n);
             _context.SaveChanges();
             return Ok();
         }
