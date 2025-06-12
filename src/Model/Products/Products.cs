@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +12,16 @@ namespace Model.Products
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required] //campo obrigatório.
         [StringLength(100)]
         public string Nome { get; set; }
 
         [StringLength(500)]
         public string Descricao { get; set; }
+     
+        [Required] //campo obrigatório
+        [StringLength(100)]
+        public string Categoria { get; set; }
 
         [Range(0, double.MaxValue)]
         public decimal Preco { get; set; }
