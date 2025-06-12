@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Products;
 using System.Collections.Generic;
@@ -33,11 +33,31 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
         }
 
-        // GET: api/Products
+        // GET: api/Products?nome=caneca&precoMin=10&precoMax=100
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Products>>> GetAllProducts()
+        public async Task<ActionResult<IEnumerable<Products>>> GetAllProducts(
+            [FromQuery] string nome,
+            [FromQuery] decimal? precoMin,
+            [FromQuery] decimal? precoMax)
         {
-            return await _context.Products.ToListAsync();
+            var query = _context.Products.AsQueryable();
+
+            if (!string.IsNullOrEmpty(nome))
+            {
+                query = query.Where(p => p.Nome.Contains(nome));
+            }
+
+            if (precoMin.HasValue)
+            {
+                query = query.Where(p => p.Preco >= precoMin.Value);
+            }
+
+            if (precoMax.HasValue)
+            {
+                query = query.Where(p => p.Preco <= precoMax.Value);
+            }
+
+            return await query.ToListAsync();
         }
 
         // GET: api/Products/5
