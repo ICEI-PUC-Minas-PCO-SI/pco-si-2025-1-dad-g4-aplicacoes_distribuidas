@@ -36,26 +36,24 @@ namespace API.Controllers
         // GET: api/Products?nome=caneca&precoMin=10&precoMax=100
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Products>>> GetAllProducts(
-            [FromQuery] string nome,
-            [FromQuery] decimal? precoMin,
-            [FromQuery] decimal? precoMax)
+            string nome = null,
+            decimal? precoMin = null,
+            decimal? precoMax = null,
+            string categoria = null)
         {
             var query = _context.Products.AsQueryable();
 
             if (!string.IsNullOrEmpty(nome))
-            {
                 query = query.Where(p => p.Nome.Contains(nome));
-            }
 
             if (precoMin.HasValue)
-            {
                 query = query.Where(p => p.Preco >= precoMin.Value);
-            }
 
             if (precoMax.HasValue)
-            {
                 query = query.Where(p => p.Preco <= precoMax.Value);
-            }
+
+            if (!string.IsNullOrEmpty(categoria))
+                query = query.Where(p => p.Categoria.ToLower() == categoria.ToLower());
 
             return await query.ToListAsync();
         }
