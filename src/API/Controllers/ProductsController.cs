@@ -34,7 +34,7 @@ namespace API.Controllers
         }
 
         // GET: api/Products?nome=caneca&precoMin=10&precoMax=100
-        [HttpGet]
+        [HttpGet("getwithfilter")]
         public async Task<ActionResult<IEnumerable<Products>>> GetAllProducts(
             string nome = null,
             decimal? precoMin = null,

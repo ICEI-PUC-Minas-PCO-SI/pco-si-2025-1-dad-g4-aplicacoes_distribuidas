@@ -16,14 +16,13 @@ namespace API.Controllers
             _context = context;
         }
 
-        // ✅ Criar novo pedido
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Order order)
         {
             if (order == null || string.IsNullOrEmpty(order.Customer) || order.Total <= 0)
                 return BadRequest(new { message = "Dados do pedido inválidos." });
 
-            order.Date = DateTime.Now;
+            order.Date = DateTime.UtcNow;
             order.Status = "Pagamento em Processamento";
 
             _context.Order.Add(order);
@@ -32,7 +31,6 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = order.Id }, order);
         }
 
-        // ✅ Listar todos os pedidos
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -40,7 +38,6 @@ namespace API.Controllers
             return Ok(orders);
         }
 
-        // ✅ Buscar pedido por ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -51,7 +48,6 @@ namespace API.Controllers
             return Ok(order);
         }
 
-        // ✅ Atualizar status do pedido
         [HttpPut("{id}/status")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
         {

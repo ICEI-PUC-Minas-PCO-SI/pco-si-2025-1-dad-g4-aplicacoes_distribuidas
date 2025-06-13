@@ -37,18 +37,22 @@ namespace API.Controllers
             {
                 return StatusCode(500, ex.Message);
             }
+
             Notification n = new Notification
-            {
-                Recipient = model.Recipient,
-                Sender = "atendimento@puroosso.com",
-                Body = "SendWelcomeEmail",
-                SentAt = DateTime.Now,
-                CreatedAt = DateTime.Now,
-                Priority = "Alta",
-                Retries = 0,
-                ErrorMessage = "",
-                cupomDeDesconto = "BONE-15",
-            };
+                {
+                    Recipient = model.Recipient,
+                    ClientName = model.ClientName,
+                    Sender = "atendimento@puroosso.com",
+                    Body = "SendWelcomeEmail",
+                    SentAt = model.SentAt,
+                    CreatedAt = model.CreatedAt,
+                    UpdatedAt = model.UpdatedAt,
+                    Priority = "Alta",
+                    Retries = 0,
+                    ErrorMessage = "",
+                    cupomDeDesconto = "BONE-15",
+                    Status = "1"
+                };
             _context.Add(n);
             _context.SaveChanges();
             return Ok();
