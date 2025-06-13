@@ -14,6 +14,31 @@ Content-Type: application/json
 {
   "nome": "Caneca Mágica",
   "descricao": "Uma caneca que muda de cor",
+  "categoria": "Copos",
   "preco": 29.90,
   "estoque": 50
+}
+
+{
+  "nome": "Espada que Canta e Dança",
+  "descricao": "Não serve para batalhas, mas é um ótimo entretenimento",
+  "categoria": "Armas",
+  "preco": 299.90,
+  "estoque": 5
+}
+
+{
+  "nome": "Cocô de Unicórnio",
+  "descricao": "Ninguém sabe para que serve, mas pelo preço deve ser muito poderoso",
+  "categoria": "Raridades muito raras",
+  "preco": 50000.00,
+  "estoque": 1
+}
+
+{
+  "nome": "Cabeça de Titanoboa",
+  "descricao": "Enfeite para uma casa grande de algum ricaço excêntrico",
+  "categoria": "Ossos",
+  "preco": 2990.99,
+  "estoque": 3
 }
