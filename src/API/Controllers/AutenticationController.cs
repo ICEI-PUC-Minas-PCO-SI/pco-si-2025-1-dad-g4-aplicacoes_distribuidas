@@ -138,7 +138,7 @@ namespace API.Controllers
             _context.Autentication.Remove(user);
             await _context.SaveChangesAsync();
 
-            return Ok($"Usuário {user} deletado com sucesso");
+            return Ok($"Usuário deletado com sucesso");
         }
     }
 }
