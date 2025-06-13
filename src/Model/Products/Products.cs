@@ -19,7 +19,7 @@ namespace Model.Products
         [StringLength(500)]
         public string Descricao { get; set; }
      
-        [Required] //campo obrigatório
+        //[Required] //campo obrigatório
         [StringLength(100)]
         public string Categoria { get; set; }
 
