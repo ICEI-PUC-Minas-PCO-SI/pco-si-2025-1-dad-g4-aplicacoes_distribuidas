@@ -12,6 +12,7 @@ using API.Service;
 using API.ViewModel;
 using Model;
 
+
 namespace API.Controllers
 {
     [Route("api/[controller]")]
@@ -38,7 +39,7 @@ namespace API.Controllers
             try
             {
                 // Um payment tem uma order e uma ordem tem um id usuário
-                var user = await OrderService.GetUserNameById(payment.OrderId, _context);
+                var user = await OrderService.GetUserNameById(payment.Order, _context);
                 NotificationViewModel notificationViewModel = new NotificationViewModel
                 {
                     Customer = user,
@@ -93,13 +94,13 @@ namespace API.Controllers
                 return NotFound();
             }
 
-            payment.OrderId = updatedPayment.OrderId;
+            payment.Order = updatedPayment.Order;
             payment.Amount = updatedPayment.Amount;
             payment.PaymentMethod = updatedPayment.PaymentMethod;
             payment.Status = updatedPayment.Status;
             payment.PaidAt = updatedPayment.PaidAt;
 
-            var user = await OrderService.GetUserNameById(payment.OrderId, _context);
+            var user = await OrderService.GetUserNameById(payment.Order, _context);
             NotificationViewModel notificationViewModel = new NotificationViewModel
             {
                 Customer = user,
