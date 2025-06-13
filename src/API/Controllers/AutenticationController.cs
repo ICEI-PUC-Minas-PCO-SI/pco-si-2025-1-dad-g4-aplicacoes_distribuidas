@@ -123,5 +123,22 @@ namespace API.Controllers
 
             return Ok($"Nova senha gerada: {novaSenha}");
         }
+
+        // Deleta usuário pelo ID
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeletarUsuario(int id)
+        {
+            var user = await _context.Autentication.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound("Usuário não encontrado");
+            }
+
+            _context.Autentication.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return Ok($"Usuário {user} deletado com sucesso");
+        }
     }
 }
