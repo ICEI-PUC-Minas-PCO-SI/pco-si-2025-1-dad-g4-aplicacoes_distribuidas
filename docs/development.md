@@ -106,99 +106,77 @@ A aplicação permite que usuários se cadastrem e façam login.
   - `POST /api/autenticacao/cadastrar`  
   - `POST /api/autenticacao/login`
 
+
 ---
+
 ## ✅ RF-002: CRUD de Produtos
-**Descrição:**
+
+**Descrição:**  
 A aplicação permite criar, ler, atualizar e excluir produtos.
 
 **Artefatos criados:**  
-- **API** 
-   - `Controllers/ProductsController.cs`
+- **API**  
+  - `Controllers/ProductsController.cs`  
 - **Model**  
   - `Model.Products.Products.cs`
 
-**Estruturas de dados:** 
-  - Entidade `Products`
-    - Id: Identificador único do produto.
-    - Nome: Nome do produto (obrigatório, até 100 caracteres).
-    - escricao: Descrição do produto (até 500 caracteres).
-    - Preco: Preço do produto (valor não negativo).
-    - Estoque: Quantidade em estoque (valor não negativo).
-**Verificação:**
-- Testar endpoints:
-  
-  -`POST /api/Products`
-    -Criar novo produto.
-    -Validações automáticas via data annotations ([Required], [StringLength], [Range]).
+**Estruturas de dados:**  
+- Entidade `Products`  
+  - `Id`: Identificador único do produto.  
+  - `Nome`: Nome do produto (obrigatório, até 100 caracteres).  
+  - `Descricao`: Descrição do produto (até 500 caracteres).  
+  - `Preco`: Preço do produto (valor não negativo).  
+  - `Estoque`: Quantidade em estoque (valor não negativo).
 
-  -`GET /api/Products`
-    - Listar todos os produtos.
-
-  -`GET /api/Products/{id}`
-    - Consultar produto pelo ID.
-
-  -`PUT /api/Products/{id}`
-    - Atualizar produto existente.
-
-  -`DELETE /api/Products/{id}`
+**Verificação:**  
+- Testar endpoints:  
+  - `POST /api/Products`  
+    - Criar novo produto.  
+    - Validações automáticas via data annotations (`[Required]`, `[StringLength]`, `[Range]`).  
+  - `GET /api/Products`  
+    - Listar todos os produtos.  
+  - `GET /api/Products/{id}`  
+    - Consultar produto pelo ID.  
+  - `PUT /api/Products/{id}`  
+    - Atualizar produto existente.  
+  - `DELETE /api/Products/{id}`  
     - Remover produto pelo ID.
- 
----
-Perfeito! Agora entendi o que quer: **um texto "cru", puro, exatamente com as mesmas quebras de linha, espaçamento e caracteres**, para que, ao colar no Markdown (`.md`) do GitHub, fique **idêntico** ao modelo.
-
-Aqui está a versão pronta, formatada **EXATAMENTE** como o exemplo que enviou:
 
 ---
 
 ## ✅ RF-005: Cadastro de Pagamento
 
-**Descrição:**
+**Descrição:**  
 A aplicação permite que seja realizado o cadastro de um novo pagamento. Todo pagamento criado inicia com o status "Pending".
 
-**Artefatos criados:**
+**Artefatos criados:**  
+- **API**  
+  - `Controllers/PaymentsController.cs`  
+- **Model**  
+  - `Payments`
 
-* **API**
+**Estruturas de dados:**  
+- Entidade `Payments`  
+  - `Id (int)`: identificador único do pagamento.  
+  - `OrderId (int)`: identificador do pedido relacionado ao pagamento.  
+  - `Amount (decimal)`: valor a ser pago.  
+  - `PaymentMethod (string)`: método de pagamento, como "CreditCard", "Pix", ou "Boleto".  
+  - `Status (string)`: status atual do pagamento, iniciado como "Pending".  
+  - `CreatedAt (DateTime)`: data e hora em que o pagamento foi criado.  
+  - `PaidAt (DateTime?)`: data e hora em que o pagamento foi efetuado, se aplicável.
 
-  * `Controllers/PaymentsController.cs`
-* **Model**
+**Verificação:**  
+- Testar endpoint:  
+  - `POST /api/payments`  
 
-  * `Payments`
-
-**Estruturas de dados:**
-
-* Entidade `Payments`
-
-  * `Id (int)`: identificador único do pagamento.
-  * `OrderId (int)`: identificador do pedido relacionado ao pagamento.
-  * `Amount (decimal)`: valor a ser pago.
-  * `PaymentMethod (string)`: método de pagamento, como "CreditCard", "Pix", ou "Boleto".
-  * `Status (string)`: status atual do pagamento, iniciado como "Pending".
-  * `CreatedAt (DateTime)`: data e hora em que o pagamento foi criado.
-  * `PaidAt (DateTime?)`: data e hora em que o pagamento foi efetuado, se aplicável.
-
-**Verificação:**
-
-* Testar endpoint:
-
-  * `POST /api/payments`
-* Fluxo esperado:
-
-  * Recebe um objeto `Payments` no corpo da requisição.
-  * Define automaticamente o status como "Pending".
-  * Persiste o pagamento no banco de dados.
-  * Retorna `201 Created` com a localização do recurso criado.
-
-
+- Fluxo esperado:  
+  - Recebe um objeto `Payments` no corpo da requisição.  
+  - Define automaticamente o status como "Pending".  
+  - Persiste o pagamento no banco de dados.  
+  - Retorna `201 Created` com a localização do recurso criado.
 
 ---
 
-Pode copiar exatamente esse texto e colar no Markdown, que ficará idêntico ao modelo que enviou.
-Se quiser, posso também preparar os outros requisitos nesse mesmo padrão. Quer que eu faça?
-
-
-
-
----
 ## ✅ RF-007: Notificações sobre Pedidos e Atualizações
 
 **Descrição:**  
@@ -215,40 +193,37 @@ Usuários recebem notificações importantes.
 - Entidade `Notification` vinculada ao usuário e ao pedido
 
 **Verificação:**  
-- Testar endpoints de envio e recebimento de notificações
-  
-- `POST /api/notification/sendwelcomeemail`  
-- `POST /api/notification/sendstatuspurchase`
+- Testar endpoints de envio e recebimento de notificações:  
+  - `POST /api/notification/sendwelcomeemail`  
+  - `POST /api/notification/sendstatuspurchase`
+
 ---
+
 ## ✅ RF-010: Consulta de Pagamento por ID
 
-**Descrição:**
+**Descrição:**  
 A aplicação permite consultar um pagamento específico a partir do seu identificador único (ID).
 
-**Artefatos criados:**
+**Artefatos criados:**  
+- **API**  
+  - `Controllers/PaymentsController.cs`  
+- **Model**  
+  - `Payments`
 
-* **API**
+**Estruturas de dados:**  
+- Entidade `Payments` (mesma estrutura definida no RF-005).
 
-  * `Controllers/PaymentsController.cs`
-* **Model**
+**Verificação:**  
+- Testar endpoint:  
+  - `GET /api/payments/{id}`  
 
-  * `Payments`
+- Fluxo esperado:  
+  - Consulta o pagamento com base no ID fornecido.  
+  - Se encontrado, retorna `200 OK` com os dados do pagamento.  
+  - Se não encontrado, retorna `404 Not Found`.
 
-**Estruturas de dados:**
-
-* Entidade `Payments` (mesma estrutura definida no RF-005).
-
-**Verificação:**
-
-* Testar endpoint:
-
-  * `GET /api/payments/{id}`
-* Fluxo esperado:
-
-  * Consulta o pagamento com base no ID fornecido.
-  * Se encontrado, retorna `200 OK` com os dados do pagamento.
-  * Se não encontrado, retorna `404 Not Found`.
 ---
+
 ## ✅ RF-011: Visualização de Status dos Pedidos
 
 **Descrição:**  
@@ -261,21 +236,20 @@ A aplicação deve permitir que os usuários visualizem o status dos seus pedido
   - `Order/Order.cs`  
 
 **Estruturas de dados:**  
-  - Entidade `Order`
-    - OderId: Chave primária.
-    - Customer: Nome do cliente.
-    - Date: Data do pedido.
-    - Total: Valor total do pedido.
-    - Status: Status atual do pedido.
+- Entidade `Order`  
+  - `OrderId`: Chave primária.  
+  - `Customer`: Nome do cliente.  
+  - `Date`: Data do pedido.  
+  - `Total`: Valor total do pedido.  
+  - `Status`: Status atual do pedido.
 
 **Verificação:**  
 - Testar endpoints:  
   - `GET /api/order`  
-    - Deve retornar todos os pedidos existentes, com os respectivos status.
-      
-  - `GET /api/order/{orderId}`
+    - Deve retornar todos os pedidos existentes, com os respectivos status.  
+  - `GET /api/order/{orderId}`  
     - Deve retornar o pedido específico, permitindo visualizar seu status atual.
-  ---
+
 
 ### Requisitos Atendidos
 
