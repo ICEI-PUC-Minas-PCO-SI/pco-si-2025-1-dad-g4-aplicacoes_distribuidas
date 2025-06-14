@@ -258,19 +258,21 @@ Legenda:
 
 ## Processo
 
-O desenvolvimento da plataforma Ossos do Ofício seguirá a metodologia Scrum, garantindo entregas contínuas e adaptação às necessidades dos usuários.
+O desenvolvimento da plataforma Ossos do Ofício foi conduzido com foco em APIs e seguiu um processo iterativo baseado em princípios ágeis, garantindo organização e qualidade em cada etapa.
 
-Planejamento e Levantamento de Requisitos – Definição de objetivos, funcionalidades e análise de concorrência. Criação do backlog e priorização das entregas.
+1. Planejamento e Levantamento de Requisitos – Foram definidos os objetivos do sistema, elaborados os requisitos funcionais e não funcionais, além da análise inicial das necessidades do projeto. A documentação foi preenchida e atualizada ao longo do desenvolvimento.
 
-Design e Prototipação – Desenvolvimento de wireframes, identidade visual e testes de usabilidade para validar a experiência do usuário.
+2. Definição da Arquitetura – A arquitetura do projeto foi estruturada no Visual Studio Code, com organização das pastas, definição dos padrões e separação de responsabilidades entre as APIs.
 
-Desenvolvimento e Implementação – Construção da plataforma com .NET Core (backend), Svelte + TypeScript (frontend) e SQL Server (banco de dados).
+3. Desenvolvimento das APIs – As APIs foram desenvolvidas separadamente utilizando .NET Core, seguindo boas práticas de programação. Cada uma foi construída com foco na modularidade e reuso.
 
-Testes e Validação – Testes unitários, de integração e segurança, garantindo funcionalidade e desempenho.
+4. Testes Unitários – Antes da integração, foram realizados testes unitários nas APIs individualmente, validando suas funcionalidades de forma isolada.
 
-Implantação e Monitoramento – Hospedagem no Azure, monitoramento com Application Insights e implementação de CI/CD para atualizações contínuas.
+5. Integração e Testes – Após a conclusão das APIs, elas foram integradas e testadas em conjunto por meio do Postman e da ferramenta Swagger, garantindo a comunicação correta entre os serviços e o funcionamento esperado.
 
-Esse processo garante um desenvolvimento ágil e eficiente, focado na qualidade e experiência do usuário. 
+6. Validação Final – Com as APIs integradas e testadas, foram feitas validações finais para garantir desempenho, segurança e aderência aos requisitos do projeto.
+
+Esse processo garantiu um desenvolvimento organizado, com foco na entrega de uma base sólida e funcional para futuras integrações com interfaces e outros serviços.
 
 ## Ferramentas
 
