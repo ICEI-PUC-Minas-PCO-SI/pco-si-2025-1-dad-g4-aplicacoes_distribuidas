@@ -254,7 +254,7 @@ Atualizado em: 01/06/2025
 | Ana Clara       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
 | Leni Rocha       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
 
-### Sprint 2
+### Sprint 3
 
 Atualizado em: 13/06/2025
 
