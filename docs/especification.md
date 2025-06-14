@@ -215,6 +215,11 @@ Docker – Para containerização dos microserviços e suas dependências.
 - Desenvolvedor _back-end_: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
 - Documentação: Ana Clara Lima Marçal, Leni Rocha Bento
 
+### Sprint 2
+- _Scrum master_: Matheus Henrique Marques Canuto
+- Desenvolvedor _back-end_: Ana Clara Lima Marçal, Bárbara Xavier Soares de Barros, Felipe Fernandes de Bellis Ruas, Guilherme Henrique de Lima Machado, Leni Rocha Bento e Matheus Henrique Marques Canuto
+- Documentação: Ana Clara Lima Marçal, Leni Rocha Bento
+
 ##  Quadro de tarefas
 
 ### Sprint 1
@@ -248,6 +253,23 @@ Atualizado em: 01/06/2025
 | Matheus Canuto        | Ajustes finais e revisão de segurança  | 20/04/2025    | 28/05/2025 | ✔️   | 28/05/2025      |
 | Ana Clara       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
 | Leni Rocha       | Revisão da documentação  |  15/05/2025    | 01/06/2025 | ✔️   |    01/06/2025   |
+
+### Sprint 2
+
+Atualizado em: 13/06/2025
+
+| Responsável         | Tarefa/Requisito                      | Iniciado em | Prazo     | Status | Terminado em |
+| :------------------ | :------------------------------------ | :---------: | :-------: | :----: | :-----------: |
+| Matheus Canuto      | Testes da API de envio de e-mails     | /06/2025    | /06/2025  | ✔️     | /06/2025      |
+| Bárbara             | Testes da API de autenticação/login   | /06/2025    | /06/2025  | ✔️     | /06/2025      |
+| Leni Rocha          | Testes do catálogo de produtos        | /06/2025    | /06/2025  | ✔️     | /06/2025      |
+| Felipe Fernandes    | Testes do carrinho de compras         | /06/2025    | /06/2025  | ✔️     | /06/2025      |
+| Guilherme Machado   | Testes do microsserviço de pagamento  | /06/2025    | /06/2025  | ✔️     | /06/2025      |
+| Ana Clara           | Testes dos status de pedidos          | 02/06/2025    | 07/06/2025  | ✔️     | 06/06/2025      |
+| Todos               | Integração de todas as APIS          | 07/06/2025    | 11/06/2025  | ✔️     | 11/06/2025      |
+| Todos               | Testes finais          | 11/06/2025    | 13/06/2025  | ✔️     | 13/06/2025      |
+
+
 
 Legenda:
 - ✔️: terminado
