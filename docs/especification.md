@@ -134,7 +134,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----| 
 |RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | ALTA |  
 |RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças  | ALTA | 
-|RF-003| A aplicação deve permitir que os usuários filtrem produtos por categoria e faixa de preço.  | ALTA |
+|RF-003| A aplicação deve permitir que os usuários filtrem produtos por nome, categoria e/ou faixa de preço.  | ALTA |
 |RF-004| A aplicação deve permitir que compradores adicionem produtos a um carrinho de compras.  | ALTA |
 |RF-005| A aplicação deve permitir que os usuários finalizem a compra através de um sistema de pagamento seguro.  | ALTA |
 |RF-006| A aplicação deve exibir um histórico de compras para cada usuário. | MÉDIA |  
