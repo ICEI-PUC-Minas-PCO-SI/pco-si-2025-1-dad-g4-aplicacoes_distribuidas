@@ -261,7 +261,7 @@ Atualizado em: 13/06/2025
 | Responsável         | Tarefa/Requisito                      | Iniciado em | Prazo     | Status | Terminado em |
 | :------------------ | :------------------------------------ | :---------: | :-------: | :----: | :-----------: |
 | Matheus Canuto      | Testes da API de envio de e-mails     | /06/2025    | /06/2025  | ✔️     | /06/2025      |
-| Bárbara             | Testes da API de autenticação/login   | 05/06/2025    | 12/06/2025  | ✔️     | 21/06/2025      |
+| Bárbara             | Testes da API de autenticação/login   | 05/06/2025    | 12/06/2025  | ✔️     | 12/06/2025      |
 | Leni Rocha          | Testes do catálogo de produtos        | /06/2025    | /06/2025  | ✔️     | /06/2025      |
 | Felipe Fernandes    | Testes do carrinho de compras         | /06/2025    | /06/2025  | ✔️     | /06/2025      |
 | Guilherme Machado   | Testes do microsserviço de pagamento  | /06/2025    | /06/2025  | ✔️     | /06/2025      |
