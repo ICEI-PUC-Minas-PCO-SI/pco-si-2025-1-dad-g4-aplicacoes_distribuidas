@@ -1,65 +1,74 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Model.Products;
-using System.Collections.Generic;
-using System.Linq;
-using API.Data;
+﻿using API.Data;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Model.Cart;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class CartController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public ProductsController(ApplicationDbContext context)
+        public CartController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // POST: api/Products
         [HttpPost]
-        public async Task<ActionResult<Products>> CreateProduct(Products product)
+        public async Task<ActionResult<Cart.CartItem>> AddItemToCart([FromBody] Cart.CartItem item)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            _context.Products.Add(product);
+            var existingItem = await _context.CartItems.FirstOrDefaultAsync(i => i.ProdutoId == item.ProdutoId);
+
+            if (existingItem != null)
+            {
+                existingItem.Quantidade += item.Quantidade;
+                _context.Entry(existingItem).State = EntityState.Modified;
+            }
+            else
+            {
+                _context.CartItems.Add(item);
+            }
+
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
+            return CreatedAtAction(nameof(GetCartItemById), new { produtoId = item.ProdutoId }, item);
         }
 
-        // GET: api/Products
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Products>>> GetAllProducts()
+
+        [HttpDelete("{produtoId}")]
+        public async Task<IActionResult> RemoveItemFromCart(int produtoId)
         {
-            return await _context.Products.ToListAsync();
+            var item = await _context.CartItems.FirstOrDefaultAsync(i => i.ProdutoId == produtoId);
+
+            if (item == null)
+            {
+                return NotFound("Produto não encontrado no carrinho");
+            }
+
+            _context.CartItems.Remove(item);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 
-        // GET: api/Products/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Products>> GetProductById(int id)
+
+        [HttpPut("{produtoId}")]
+        public async Task<IActionResult> UpdateCartItemQuantity(int produtoId, [FromQuery] int novaQuantidade)
         {
-            var product = await _context.Products.FindAsync(id);
+            var item = await _context.CartItems.FirstOrDefaultAsync(i => i.ProdutoId == produtoId);
 
-            if (product == null)
-                return NotFound();
+            if (item == null)
+            {
+                return NotFound("Produto não encontrado no carrinho");
+            }
 
-            return Ok(product);
-        }
-
-        // PUT: api/Products/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, Products product)
-        {
-            if (id != product.Id)
-                return BadRequest("ID do produto não corresponde.");
-
-            _context.Entry(product).State = EntityState.Modified;
+            item.Quantidade = novaQuantidade;
+            _context.Entry(item).State = EntityState.Modified;
 
             try
             {
@@ -67,34 +76,41 @@ namespace API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(id))
+                if (!CartItemExists(produtoId))
+                {
                     return NotFound();
+                }
                 else
+                {
                     throw;
+                }
             }
 
             return NoContent();
         }
 
-        // DELETE: api/Products/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduct(int id)
-        {
-            var product = await _context.Products.FindAsync(id);
 
-            if (product == null)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Cart.CartItem>>> GetCart()
+        {
+            var items = await _context.CartItems.ToListAsync();
+
+            return Ok(items);
+        }
+
+        [HttpGet("{produtoId}")]
+        public async Task<ActionResult<Cart.CartItem>> GetCartItemById(int produtoId)
+        {
+            var item = await _context.CartItems.FirstOrDefaultAsync(i => i.ProdutoId == produtoId);
+
+            if (item == null)
+            {
                 return NotFound();
+            }
 
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(item);
         }
 
-        // Método auxiliar
-        private bool ProductExists(int id)
+        private bool CartItemExists(int produtoId)
         {
-            return _context.Products.Any(e => e.Id == id);
-        }
-    }
-}
+            return _context.CartItems.Any(e => e.ProdutoId == produtoId);
