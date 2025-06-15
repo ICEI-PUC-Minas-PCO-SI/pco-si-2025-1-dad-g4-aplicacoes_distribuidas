@@ -132,7 +132,7 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
 **Verificação:**  
 - Testar endpoints:  
   - `POST /api/products`
-  - Fluxo esperado:    
+  - Fluxo esperado:
     - Recebe um objeto `Products` no corpo da requisição.
     - Valida os campos conforme anotações de data annotation.
     - Persiste o produto no banco de dados.
