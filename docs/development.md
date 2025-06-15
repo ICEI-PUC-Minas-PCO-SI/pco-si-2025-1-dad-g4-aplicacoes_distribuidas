@@ -195,6 +195,38 @@ Testar endpoint:
       - Retorna uma lista de produtos correspondentes ao filtro, com status `200 OK.`
 
 ---
+## ✅ RF-004: Gerenciamento de Carrinho de Compras
+**Descrição:**
+A aplicação permite ao usuário adicionar produtos ao carrinho, atualizar quantidades, visualizar os itens adicionados e remover produtos.
+
+**Artefatos criados:**
+- **API**
+- `Controllers/CartController.cs`
+- `Service/CartService.cs`
+-  **Model
+- `Cart/CartItem.cs`
+- `Cart/Cart.cs`
+  
+**Estruturas de dados:** 
+- Entidade `CartItem`
+- `Id (int)`: identificador do item.
+- `ProductId (int)`: ID do produto. 
+- `Quantity (int)`: quantidade do produto.
+- `CartId (int))`: identificador do carrinho a que o item pertence.
+- - Entidade `Cart`
+  - `Id (int)`: identificador do carrinho. 
+  - `UserId (int)`: identificador do usuário. 
+  - `Items (List<CartItem>)`:lista de produtos adicionados ao carrinho.
+  - `CreatedAt (DateTime)`: Limpa todo o carrinho de um usuário.
+    
+ **Verificação:**
+  - Testar endpoint:  
+  - `POST /api/cart/add` Adiciona um produto ao carrinho.
+  - `PUT /api/cart/update` Atualiza a quantidade de um item existente.
+  - `GET /api/cart/{userId}` Retorna o carrinho do usuário.
+  - `DELETE /api/cart/remove/{itemId}`Remove um item específico do carrinho.
+  - `DELETE /api/cart/clear/{userId}`Limpa todo o carrinho de um usuário.
+
 
 ## ✅ RF-005: Cadastro de Pagamento
 
@@ -314,6 +346,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | Barbara | Rota: /api/Autentication (GET, POST), /api/Autentication{id} (GET, PUT, DELETE), /api/Autentication/login (POST) e /api/Autentication/forgot-password (POST)|
 |RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças | Leni Rocha | Rotas: /api/Products (GET, POST), /api/Products/{id} (GET, PUT, DELETE)  |
 |RF-003| A aplicação deve permitir que os usuários filtrem produtos por nome, categoria e/ou faixa de preço. | Leni Rocha | Rota: /api/Products?nome={nome}&precoMin={valor}&precoMax={valor}&categoria={categoria} (GET)|
+|RF-004| A aplicação deve permitir que os usuários adicionem produtos ao carrinho, atualizem, visualizem e removam os itens | Felipe Fernandes | Rota: /api/cart/add, /api/cart/update, /api/cart/{userId}, /api/cart/remove/{itemId}, /api/cart/clear/{userId} |
 |RF-007| Notificações sobre Pedidos e Atualizações | Matheus Canuto | Rota: /api/notification/sendwelcomeemail e /api/notification/sendstatuspurchase|
 |RF-011| Visualização de Status dos Pedidos | Ana Clara | Rota: /api/order e /api/order/{orderId}|
 
