@@ -15,5 +15,6 @@ namespace API.Data
         public DbSet<Notification> Notification { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Autentication> Autentication { get; set; }
+
     }
 }
