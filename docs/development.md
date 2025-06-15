@@ -122,25 +122,95 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
 
 **Estruturas de dados:**  
 - Entidade `Products`  
-  - `Id`: Identificador único do produto.  
-  - `Nome`: Nome do produto (obrigatório, até 100 caracteres).  
-  - `Descricao`: Descrição do produto (até 500 caracteres).  
-  - `Preco`: Preço do produto (valor não negativo).  
-  - `Estoque`: Quantidade em estoque (valor não negativo).
+  - `Id (int)`: Identificador único do produto.  
+  - `Nome (string)`: Nome do produto (obrigatório, até 100 caracteres).  
+  - `Descricao (string)`: Descrição do produto (até 500 caracteres).
+  - `Categoria (string)`: categoria do produto.
+  - `Preco (decimal)`: Preço do produto (valor não negativo).  
+  - `Estoque (int)`: Quantidade em estoque (valor não negativo).
 
 **Verificação:**  
 - Testar endpoints:  
-  - `POST /api/Products`  
-    - Criar novo produto.  
-    - Validações automáticas via data annotations (`[Required]`, `[StringLength]`, `[Range]`).  
-  - `GET /api/Products`  
-    - Listar todos os produtos.  
-  - `GET /api/Products/{id}`  
-    - Consultar produto pelo ID.  
-  - `PUT /api/Products/{id}`  
-    - Atualizar produto existente.  
-  - `DELETE /api/Products/{id}`  
-    - Remover produto pelo ID.
+ 
+    POST /api/products
+    Fluxo esperado:
+    
+    Recebe um objeto Products no corpo da requisição.
+    
+    Valida os campos conforme anotações de data annotation.
+    
+    Persiste o produto no banco de dados.
+    
+    Retorna 201 Created com a localização do recurso criado.
+    
+    GET /api/products
+    Fluxo esperado:
+    
+    Retorna todos os produtos cadastrados.
+    
+    Pode ser combinado com filtros opcionais (ver RF-006).
+    
+    GET /api/products/{id}
+    Fluxo esperado:
+    
+    Retorna os detalhes de um produto específico.
+    
+    Retorna 404 Not Found se o ID não existir.
+    
+    PUT /api/products/{id}
+    Fluxo esperado:
+    
+    Atualiza os dados de um produto existente com base no ID.
+    
+    Valida se o ID do corpo corresponde ao ID da URL.
+    
+    Retorna 204 No Content se a atualização for bem-sucedida.
+    
+    Retorna 404 Not Found se o produto não existir.
+    
+    DELETE /api/products/{id}
+    Fluxo esperado:
+    
+    Exclui o produto com o ID especificado.
+    
+    Retorna 204 No Content se a exclusão for bem-sucedida.
+    
+    Retorna 404 Not Found se o produto não for encontrado.
+        
+
+---
+## ✅ RF-003: Filtro de Produtos por Categoria e Faixa de Preço
+
+**Descrição:**
+A aplicação permite ao usuário consultar produtos com base em filtros opcionais, como nome, categoria e faixa de preço mínima e máxima
+
+**Artefatos criados:**
+- ** API**
+  - `Controllers/ProductsController.cs`
+- **Model**
+  -`Products`
+
+**Estruturas de dados:**
+- Entidade `Products`:
+  - `Id (int)`: identificador único do produto.
+  - `Nome (string)`: nome do produto.
+  - `Descricao (string)`: descrição detalhada do produto.
+  - `Categoria (string)`: categoria do produto.
+  - `Preco (decimal)`: valor do produto.
+  - `Estoque (int)`: quantidade disponível em estoque.
+
+**Verificação:**
+- Testar endpoint:
+  - `GET /api/products?nome=caneca&precoMin=10&precoMax=100&categoria=utilidades`
+
+- Fluxo esperado:
+  - O endpoint aceita parâmetros opcionais: `nome`, `precoMin`, `precoMax`, e `categoria`.
+  - Filtra os produtos que:
+  - Contêm o termo nome no `nome`.
+  - Têm preço maior ou igual a `precoMin`.
+  - Têm preço menor ou igual a `precoMax`.
+  - Pertencem à categoria informada (comparação case-insensitive).
+  - Retorna uma lista de produtos correspondentes ao filtro, com status `200 OK.`
 
 ---
 
@@ -261,6 +331,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |------|------------------------|------------|-----------------|
 |RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | Barbara | Rota:  |
 |RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças | Leni Rocha | Rotas: /api/Products (GET, POST), /api/Products/{id} (GET, PUT, DELETE)  |
+
 |RF-007| Notificações sobre Pedidos e Atualizações | Matheus Canuto | Rota: /api/notification/sendwelcomeemail e /api/notification/sendstatuspurchase|
 |RF-011| Visualização de Status dos Pedidos | Ana Clara | Rota: /api/order e /api/order/{orderId}|
 
