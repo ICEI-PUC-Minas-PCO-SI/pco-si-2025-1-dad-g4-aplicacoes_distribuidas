@@ -269,6 +269,8 @@ Atualizado em: 13/06/2025
 | Todos               | Integração de todas as APIS          | 07/06/2025    | 11/06/2025  | ✔️     | 11/06/2025      |
 | Todos               | Testes finais          | 11/06/2025    | 13/06/2025  | ✔️     | 13/06/2025      |
 | Ana Clara           | Ajustes na Documentação        | 13/06/2025    | 15/06/2025  | ✔️     | 13/06/2025      |
+| Matheus Canuto           | Ajustes na Documentação        | 15/06/2025    | 15/06/2025  | ✔️     | 15/06/2025      |
+
 
 
 Legenda:
