@@ -129,37 +129,37 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
   - `Preco (decimal)`: Preço do produto (valor não negativo).  
   - `Estoque (int)`: Quantidade em estoque (valor não negativo).
 
-**Verificação:**  
-Testar endpoints:  
-  - `POST /api/products`
-  - Fluxo esperado:
-    - Recebe um objeto `Products` no corpo da requisição.
-    - Valida os campos conforme anotações de data annotation.
+**Verificação:**   
+Testar endpoints:   
+  - `POST /api/products`   
+  - Fluxo esperado:  
+    - Recebe um objeto `Products` no corpo da requisição.  
+    - Valida os campos conforme anotações de data annotation.  
     - Persiste o produto no banco de dados.
     - Retorna `201 Created` com a localização do recurso criado.
     
-  - `GET /api/products`
-  - Fluxo esperado:    
-    - Retorna todos os produtos cadastrados.    
+  - `GET /api/products`   
+  - Fluxo esperado:      
+    - Retorna todos os produtos cadastrados.      
     - Pode ser combinado com filtros opcionais.
           
-  - `GET /api/products/{id}`
-  - Fluxo esperado:    
+  - `GET /api/products/{id}`    
+  - Fluxo esperado:  
     - Retorna os detalhes de um produto específico.    
     - Retorna 404 Not Found se o ID não existir.
             
-  - `PUT /api/products/{id}`
-  - Fluxo esperado:    
+  - `PUT /api/products/{id}`   
+  - Fluxo esperado:      
     - Atualiza os dados de um produto existente com base no ID.    
-    - Valida se o ID do corpo corresponde ao ID da URL.    
+    - Valida se o ID do corpo corresponde ao ID da URL.  
     - Retorna `204 No Content` se a atualização for bem-sucedida.    
-    - Retorna `404 Not Found` se o produto não existir.
+    - Retorna `404 Not Found` se o produto não existir.  
            
-  - `DELETE /api/products/{id}`
-  - Fluxo esperado:    
+  - `DELETE /api/products/{id}`    
+  - Fluxo esperado:     
     - Exclui o produto com o ID especificado.    
     - Retorna `204 No Content` se a exclusão for bem-sucedida.    
-    - Retorna `404 Not Found` se o produto não for encontrado.        
+    - Retorna `404 Not Found` se o produto não for encontrado.       
 
 ---
 ## ✅ RF-003: Filtro de Produtos por Categoria e Faixa de Preço
@@ -182,17 +182,16 @@ A aplicação permite ao usuário consultar produtos com base em filtros opciona
   - `Preco (decimal)`: valor do produto.
   - `Estoque (int)`: quantidade disponível em estoque.
 
-**Verificação:**
-
-Testar endpoint:
-  - `GET /api/products?nome=caneca&precoMin=10&precoMax=100&categoria=utilidades`
-  - Fluxo esperado:
-    - O endpoint aceita parâmetros opcionais: `nome`, `precoMin`, `precoMax`, e `categoria`.
-    - Filtra os produtos que:
-      - Contêm o termo nome no `nome`.
-      - Têm preço maior ou igual a `precoMin`.
-      - Têm preço menor ou igual a `precoMax`.
-      - Pertencem à categoria informada (comparação case-insensitive).
+**Verificação:**  
+Testar endpoint:  
+  - `GET /api/products?nome=caneca&precoMin=10&precoMax=100&categoria=utilidades`  
+  - Fluxo esperado:  
+    - O endpoint aceita parâmetros opcionais: `nome`, `precoMin`, `precoMax`, e `categoria`.  
+    - Filtra os produtos que:  
+      - Contêm o termo nome no `nome`.  
+      - Têm preço maior ou igual a `precoMin`.  
+      - Têm preço menor ou igual a `precoMax`.  
+      - Pertencem à categoria informada (comparação case-insensitive).  
       - Retorna uma lista de produtos correspondentes ao filtro, com status `200 OK.`
 
 ---
