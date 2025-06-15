@@ -130,7 +130,7 @@ A aplicação permite criar, ler, atualizar e excluir produtos.
   - `Estoque (int)`: Quantidade em estoque (valor não negativo).
 
 **Verificação:**  
-- Testar endpoints:  
+Testar endpoints:  
   - `POST /api/products`
   - Fluxo esperado:
     - Recebe um objeto `Products` no corpo da requisição.
@@ -183,7 +183,7 @@ A aplicação permite ao usuário consultar produtos com base em filtros opciona
   - `Estoque (int)`: quantidade disponível em estoque.
 
 **Verificação:**
-- Testar endpoint:
+Testar endpoint:
   - `GET /api/products?nome=caneca&precoMin=10&precoMax=100&categoria=utilidades`
   - Fluxo esperado:
     - O endpoint aceita parâmetros opcionais: `nome`, `precoMin`, `precoMax`, e `categoria`.
