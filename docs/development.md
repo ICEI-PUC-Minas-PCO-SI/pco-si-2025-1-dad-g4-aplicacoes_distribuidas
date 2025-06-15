@@ -183,6 +183,7 @@ A aplicação permite ao usuário consultar produtos com base em filtros opciona
   - `Estoque (int)`: quantidade disponível em estoque.
 
 **Verificação:**
+
 Testar endpoint:
   - `GET /api/products?nome=caneca&precoMin=10&precoMax=100&categoria=utilidades`
   - Fluxo esperado:
