@@ -134,7 +134,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----| 
 |RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | ALTA |  
 |RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças  | ALTA | 
-|RF-003| A aplicação deve permitir que os usuários filtrem produtos por categoria, autenticidade e faixa de preço.  | ALTA |
+|RF-003| A aplicação deve permitir que os usuários filtrem produtos por categoria e faixa de preço.  | ALTA |
 |RF-004| A aplicação deve permitir que compradores adicionem produtos a um carrinho de compras.  | ALTA |
 |RF-005| A aplicação deve permitir que os usuários finalizem a compra através de um sistema de pagamento seguro.  | ALTA |
 |RF-006| A aplicação deve exibir um histórico de compras para cada usuário. | MÉDIA |  
@@ -262,7 +262,7 @@ Atualizado em: 13/06/2025
 | :------------------ | :------------------------------------ | :---------: | :-------: | :----: | :-----------: |
 | Matheus Canuto      | Testes da API de envio de e-mails     | /06/2025    | /06/2025  | ✔️     | /06/2025      |
 | Bárbara             | Testes da API de autenticação/login   | 05/06/2025    | 12/06/2025  | ✔️     | 12/06/2025      |
-| Leni Rocha          | Testes do catálogo de produtos        | /06/2025    | /06/2025  | ✔️     | /06/2025      |
+| Leni Rocha          | Testes do catálogo de produtos        | 09/06/2025    | 13/06/2025  | ✔️     | 12/06/2025      |
 | Felipe Fernandes    | Testes do carrinho de compras         | /06/2025    | /06/2025  | ✔️     | /06/2025      |
 | Guilherme Machado   | Testes do microsserviço de pagamento  | /06/2025    | /06/2025  | ✔️     | /06/2025      |
 | Ana Clara           | Testes dos status de pedidos          | 02/06/2025    | 07/06/2025  | ✔️     | 06/06/2025      |
