@@ -34,24 +34,24 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<Payments>> CreatePayment(Payments payment)
         {
-            payment.Status = DefaultValues.StatusPedido.Pendente;
+            //payment.Status = DefaultValues.StatusPedido.Pendente;
 
-            try
-            {
-                // Um payment tem uma order e uma ordem tem um id usuário
-                var user = await OrderService.GetUserNameById(payment.Order, _context);
-                NotificationViewModel notificationViewModel = new NotificationViewModel
-                {
-                    Customer = user,
-                    Sender = "atendimento@puroosso.com",
-                    Status = payment.Status,
-                };
-                EmailService.SendStatusEmail(notificationViewModel, _emailSettings);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            //try
+            //{
+            //    // Um payment tem uma order e uma ordem tem um id usuário
+            //    var user = await OrderService.GetUserNameById(payment.Order, _context);
+            //    NotificationViewModel notificationViewModel = new NotificationViewModel
+            //    {
+            //        Customer = user,
+            //        Sender = "atendimento@puroosso.com",
+            //        Status = payment.Status,
+            //    };
+            //    EmailService.SendStatusEmail(notificationViewModel, _emailSettings);
+            //}
+            //catch (Exception ex)
+            //{
+            //    return StatusCode(500, ex.Message);
+            //}
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
 
@@ -94,45 +94,45 @@ namespace API.Controllers
                 return NotFound();
             }
 
-            payment.Order = updatedPayment.Order;
+            //payment.Order = updatedPayment.Order;
             payment.Amount = updatedPayment.Amount;
             payment.PaymentMethod = updatedPayment.PaymentMethod;
             payment.Status = updatedPayment.Status;
             payment.PaidAt = updatedPayment.PaidAt;
 
-            var user = await OrderService.GetUserNameById(payment.Order, _context);
-            NotificationViewModel notificationViewModel = new NotificationViewModel
-            {
-                Customer = user,
-                Sender = "atendimento@puroosso.com",
-                Status = payment.Status,
-            };
+            //var user = await OrderService.GetUserNameById(payment.Order, _context);
+            //NotificationViewModel notificationViewModel = new NotificationViewModel
+            //{
+            //    Customer = user,
+            //    Sender = "atendimento@puroosso.com",
+            //    Status = payment.Status,
+            //};
 
-            try
-            {
-                EmailService.SendStatusEmail(notificationViewModel, _emailSettings);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            //try
+            //{
+            //    EmailService.SendStatusEmail(notificationViewModel, _emailSettings);
+            //}
+            //catch (Exception ex)
+            //{
+            //    return StatusCode(500, ex.Message);
+            //}
 
-            Notification n = new Notification
-            {
-                Recipient = notificationViewModel.Recipient,
-                Sender = "atendimento@puroosso.com",
-                Body = "SendStatusPurchase",
-                SentAt = DateTime.Now,
-                CreatedAt = DateTime.Now,
-                Priority = "Alta",
-                Retries = 0,
-                cupomDeDesconto = "BONE-15",
-                Status = notificationViewModel.Status
-            };
+            //Notification n = new Notification
+            //{
+            //    Recipient = notificationViewModel.Recipient,
+            //    Sender = "atendimento@puroosso.com",
+            //    Body = "SendStatusPurchase",
+            //    SentAt = DateTime.Now,
+            //    CreatedAt = DateTime.Now,
+            //    Priority = "Alta",
+            //    Retries = 0,
+            //    cupomDeDesconto = "BONE-15",
+            //    Status = notificationViewModel.Status
+            //};
 
-            _context.Notification.Add(n);
+            //_context.Notification.Add(n);
 
-            _context.Entry(payment).State = EntityState.Modified;
+            //_context.Entry(payment).State = EntityState.Modified;
 
             try
             {

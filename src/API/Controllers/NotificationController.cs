@@ -26,7 +26,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Route("sendwelcomeemail")]
+        [Route("welcomeemail")]
         public async Task<ActionResult<Notification>> SendWelcomeEmail(Notification model)
         {
             try
@@ -59,7 +59,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Route("sendstatuspurchase")]
+        [Route("statuspurchase")]
         public async Task<ActionResult<Notification>> SendStatusPurchase(NotificationViewModel notificationViewModel)
         {
             try
@@ -76,8 +76,6 @@ namespace API.Controllers
                 Recipient = notificationViewModel.Recipient,
                 Sender = "atendimento@puroosso.com",
                 Body = "SendStatusPurchase",
-                SentAt = DateTime.Now,
-                CreatedAt = DateTime.Now,
                 Priority = "Alta",
                 Retries = 0,
                 cupomDeDesconto = "BONE-15",
