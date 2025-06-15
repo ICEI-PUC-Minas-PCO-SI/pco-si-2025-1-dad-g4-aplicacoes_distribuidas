@@ -303,7 +303,7 @@ A aplicação deve permitir que os usuários visualizem o status dos seus pedido
     - Deve retornar o pedido específico, permitindo visualizar seu status atual.
 
 
-### Requisitos Atendidos
+## Requisitos Atendidos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais que relacionam o escopo do projeto com os artefatos criados:
 
