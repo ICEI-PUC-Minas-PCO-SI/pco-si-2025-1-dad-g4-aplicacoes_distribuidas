@@ -341,13 +341,25 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito | Responsável | Artefato Criado |
-|------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário se cadastre e faça login | Barbara | Rota: /api/Autentication (GET, POST), /api/Autentication{id} (GET, PUT, DELETE), /api/Autentication/login (POST) e /api/Autentication/forgot-password (POST)|
-|RF-002| A aplicação deve permitir que o vendedor cadastre e gerencie novas peças | Leni Rocha | Rotas: /api/Products (GET, POST), /api/Products/{id} (GET, PUT, DELETE)  |
-|RF-003| A aplicação deve permitir que os usuários filtrem produtos por nome, categoria e/ou faixa de preço. | Leni Rocha | Rota: /api/Products?nome={nome}&precoMin={valor}&precoMax={valor}&categoria={categoria} (GET)|
-|RF-004| A aplicação deve permitir que os usuários adicionem produtos ao carrinho, atualizem, visualizem e removam os itens | Felipe Fernandes | Rota: /api/cart/add, /api/cart/update, /api/cart/{userId}, /api/cart/remove/{itemId}, /api/cart/clear/{userId} |
-|RF-007| Notificações sobre Pedidos e Atualizações | Matheus Canuto | Rota: /api/notification/sendwelcomeemail e /api/notification/sendstatuspurchase|
-|RF-011| Visualização de Status dos Pedidos | Ana Clara | Rota: /api/order e /api/order/{orderId}|
+Aqui está sua tabela atualizada incluindo os requisitos RF-005 e RF-010 que você descreveu:
+
+---
+
+### Requisitos Funcionais
+
+| ID     | Descrição do Requisito                                                                                             | Responsável       | Artefato Criado                                                                                                                                                       |
+| ------ | ------------------------------------------------------------------------------------------------------------------ | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RF-001 | A aplicação deve permitir que o usuário se cadastre e faça login                                                   | Barbara           | Rotas: `/api/Autentication (GET, POST)`, `/api/Autentication/{id} (GET, PUT, DELETE)`, `/api/Autentication/login (POST)`, `/api/Autentication/forgot-password (POST)` |
+| RF-002 | A aplicação deve permitir que o vendedor cadastre e gerencie novas peças                                           | Leni Rocha        | Rotas: `/api/Products (GET, POST)`, `/api/Products/{id} (GET, PUT, DELETE)`                                                                                           |
+| RF-003 | A aplicação deve permitir que os usuários filtrem produtos por nome, categoria e/ou faixa de preço                 | Leni Rocha        | Rota: `/api/Products?nome={nome}&precoMin={valor}&precoMax={valor}&categoria={categoria} (GET)`                                                                       |
+| RF-004 | A aplicação deve permitir que os usuários adicionem produtos ao carrinho, atualizem, visualizem e removam os itens | Felipe Fernandes  | Rotas: `/api/cart/add`, `/api/cart/update`, `/api/cart/{userId}`, `/api/cart/remove/{itemId}`, `/api/cart/clear/{userId}`                                             |
+| RF-005 | Cadastro de Pagamento                                                                                              | Guilherme Machado | Rota: `/api/payments (POST)`                                                                                                                                          |
+| RF-007 | Notificações sobre Pedidos e Atualizações                                                                          | Matheus Canuto    | Rotas: `/api/notification/sendwelcomeemail`, `/api/notification/sendstatuspurchase`                                                                                   |
+| RF-010 | Consulta de Pagamento por ID                                                                                       | Guilherme Machado | Rota: `/api/payments/{id} (GET)`                                                                                                                                      |
+| RF-011 | Visualização de Status dos Pedidos                                                                                 | Ana Clara         | Rotas: `/api/order`, `/api/order/{orderId}`                                                                                                                           |
+
+---
+
+Se quiser, posso também atualizar a tabela de **Requisitos Não-Funcionais** ou ajudar a formatar tudo em um documento final. Quer?
 
 
